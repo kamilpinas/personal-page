@@ -1,2 +1,11 @@
+# Zezwól wszystkim robotom na indeksowanie całej strony
 User-agent: *
-Allow: /
+Disallow:
+
+# Zablokuj prywatne lub tymczasowe foldery
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /temp/
+
+# Link do mapy witryny
+Sitemap: https://kamilpinas.dev/sitemap.xml
