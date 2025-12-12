@@ -179,11 +179,11 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       ],
     },
 
-    // --- React Ecosystem (Existing + New) ---
+    // --- Frontend Development ---
     {
       id: "react",
       name: t("skillsPage.skills.react.name"),
-      category: "react-ecosystem",
+      category: "frontend-development",
       icon: "react",
       proficiency: 100,
       tags: ["hooks", "tsx", "a11y", "performance"],
@@ -202,24 +202,9 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       ],
     },
     {
-      id: "lodash",
-      name: t("skillsPage.skills.lodash.name"),
-      category: "utilities",
-      icon: "lodash",
-      proficiency: 50,
-      tags: ["utility-library", "data-manipulation"],
-      description: t("skillsPage.skills.lodash.description"),
-      highlights: [
-        t("skillsPage.skills.lodash.highlights.0"),
-        t("skillsPage.skills.lodash.highlights.1"),
-        t("skillsPage.skills.lodash.highlights.2"),
-      ],
-      links: [{ label: "Lodash Docs", href: "https://lodash.com/docs" }],
-    },
-    {
       id: "redux-toolkit",
       name: t("skillsPage.skills.redux-toolkit.name"),
-      category: "react-ecosystem",
+      category: "frontend-development",
       icon: "redux",
       proficiency: 80,
       tags: ["state-management", "flux", "middleware"],
@@ -240,7 +225,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "react-context",
       name: t("skillsPage.skills.react-context.name"),
-      category: "react-ecosystem",
+      category: "frontend-development",
       icon: "react",
       proficiency: 80,
       tags: ["state-management", "dependency-injection"],
@@ -260,7 +245,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "axios",
       name: t("skillsPage.skills.axios.name"),
-      category: "react-ecosystem",
+      category: "frontend-development",
       icon: "axios",
       proficiency: 70,
       tags: ["http-client", "api-integration"],
@@ -274,11 +259,10 @@ export const getSkills = (t: TFunction): Array<Skill> => {
         { label: "Axios Docs", href: "https://axios-http.com/docs/intro" },
       ],
     },
-
     {
       id: "tailwind-css",
       name: t("skillsPage.skills.tailwind-css.name"),
-      category: "ui-ux",
+      category: "frontend-development",
       icon: "tailwind-css",
       proficiency: 80,
       tags: ["utility-first", "css-framework", "jit"],
@@ -295,7 +279,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "react-router",
       name: t("skillsPage.skills.react-router.name"),
-      category: "react-ecosystem",
+      category: "frontend-development",
       icon: "react-router",
       proficiency: 30,
       tags: ["routing", "spa", "navigation"],
@@ -308,11 +292,10 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       links: [{ label: "React Router Docs", href: "https://reactrouter.com/" }],
     },
 
-    // --- UI/UX (Existing + New) ---
     {
       id: "material-ui",
       name: t("skillsPage.skills.material-ui.name"),
-      category: "ui-ux",
+      category: "frontend-development",
       icon: "material-ui",
       proficiency: 30,
       tags: ["component-library", "design-system", "theming"],
@@ -324,31 +307,11 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       ],
       links: [{ label: "MUI Docs", href: "https://mui.com/" }],
     },
-    {
-      id: "ui-library-maintenance",
-      name: t("skillsPage.skills.ui-library-maintenance.name"),
-      category: "ui-ux",
-      icon: "ui-library",
-      proficiency: 50,
-      tags: ["design-system", "storybook", "documentation"],
-      description: t("skillsPage.skills.ui-library-maintenance.description"),
-      highlights: [
-        t("skillsPage.skills.ui-library-maintenance.highlights.0"),
-        t("skillsPage.skills.ui-library-maintenance.highlights.1"),
-        t("skillsPage.skills.ui-library-maintenance.highlights.2"),
-      ],
-      links: [
-        { label: "Storybook", href: "https://storybook.js.org/" },
-        {
-          label: "Design Systems Handbook",
-          href: "https://www.designbetter.co/design-systems-handbook",
-        },
-      ],
-    },
+
     {
       id: "styled-components",
       name: t("skillsPage.skills.styled-components.name"),
-      category: "ui-ux",
+      category: "frontend-development",
       icon: "styled-components",
       proficiency: 25,
       tags: ["css-in-js", "theming", "scoped-css"],
@@ -368,7 +331,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "ag-grid",
       name: t("skillsPage.skills.ag-grid.name"),
-      category: "ui-ux",
+      category: "frontend-development",
       icon: "ag-grid",
       proficiency: 70,
       tags: ["data-grid", "enterprise", "performance"],
@@ -382,29 +345,89 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     },
 
     {
-      id: "accessibility",
-      name: t("skillsPage.skills.accessibility.name"),
-      category: "ui-ux",
-      icon: "accessibility",
-      proficiency: 15,
-      tags: ["wcag", "aria", "screen-readers"],
-      description: t("skillsPage.skills.accessibility.description"),
+      id: "recharts",
+      name: t("skillsPage.skills.recharts.name"),
+      category: "frontend-development",
+      icon: "recharts",
+      proficiency: 30,
+      tags: ["data-visualization", "charts", "d3-wrapper"],
+      description: t("skillsPage.skills.recharts.description"),
       highlights: [
-        t("skillsPage.skills.accessibility.highlights.0"),
-        t("skillsPage.skills.accessibility.highlights.1"),
-        t("skillsPage.skills.accessibility.highlights.2"),
+        t("skillsPage.skills.recharts.highlights.0"),
+        t("skillsPage.skills.recharts.highlights.1"),
+        t("skillsPage.skills.recharts.highlights.2"),
+      ],
+      links: [{ label: "Recharts Docs", href: "https://recharts.org/en-US/" }],
+    },
+    {
+      id: "react-hook-form",
+      name: t("skillsPage.skills.react-hook-form.name"),
+      category: "frontend-development",
+      icon: "react-hook-form",
+      proficiency: 20,
+      tags: ["form-management", "performance", "uncontrolled"],
+      description: t("skillsPage.skills.react-hook-form.description"),
+      highlights: [
+        t("skillsPage.skills.react-hook-form.highlights.0"),
+        t("skillsPage.skills.react-hook-form.highlights.1"),
+        t("skillsPage.skills.react-hook-form.highlights.2"),
       ],
       links: [
-        { label: "WebAIM", href: "https://webaim.org/" },
-        { label: "A11y Project", href: "https://www.a11yproject.com/" },
+        { label: "React Hook Form Docs", href: "https://react-hook-form.com/" },
       ],
     },
 
-    // --- Development Workflow (Existing + New) ---
+    {
+      id: "redux-saga",
+      name: t("skillsPage.skills.redux-saga.name"),
+      category: "frontend-development",
+      icon: "redux-saga",
+      proficiency: 55,
+      tags: ["side-effects", "middleware", "functional"],
+      description: t("skillsPage.skills.redux-saga.description"),
+      highlights: [
+        t("skillsPage.skills.redux-saga.highlights.0"),
+        t("skillsPage.skills.redux-saga.highlights.1"),
+        t("skillsPage.skills.redux-saga.highlights.2"),
+      ],
+      links: [{ label: "Redux Saga Docs", href: "https://redux-saga.js.org/" }],
+    },
+
+    {
+      id: "d3",
+      name: t("skillsPage.skills.d3.name"),
+      category: "frontend-development",
+      icon: "d3",
+      proficiency: 50,
+      tags: ["data-visualization", "svg", "manipulation"],
+      description: t("skillsPage.skills.d3.description"),
+      highlights: [
+        t("skillsPage.skills.d3.highlights.0"),
+        t("skillsPage.skills.d3.highlights.1"),
+      ],
+      links: [{ label: "D3 Docs", href: "https://d3js.org/" }],
+    },
+    {
+      id: "emotion",
+      name: t("skillsPage.skills.emotion.name"),
+      category: "frontend-development",
+      icon: "emotion",
+      proficiency: 40,
+      tags: ["css-in-js", "theming", "performance"],
+      description: t("skillsPage.skills.emotion.description"),
+      highlights: [
+        t("skillsPage.skills.emotion.highlights.0"),
+        t("skillsPage.skills.emotion.highlights.1"),
+        t("skillsPage.skills.emotion.highlights.2"),
+      ],
+      links: [{ label: "Emotion Docs", href: "https://emotion.sh/" }],
+    },
+
+    // --- DevOps & Tools ---
     {
       id: "git",
       name: t("skillsPage.skills.git.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "git",
       proficiency: 70,
       tags: ["vcs", "collaboration", "github"],
@@ -425,7 +448,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "chrome-devtools",
       name: t("skillsPage.skills.chrome-devtools.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "chrome",
       proficiency: 30,
       tags: ["debugging", "performance", "memory"],
@@ -443,9 +466,24 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       ],
     },
     {
+      id: "lodash",
+      name: t("skillsPage.skills.lodash.name"),
+      category: "devops-and-tools",
+      icon: "lodash",
+      proficiency: 50,
+      tags: ["utility-library", "data-manipulation"],
+      description: t("skillsPage.skills.lodash.description"),
+      highlights: [
+        t("skillsPage.skills.lodash.highlights.0"),
+        t("skillsPage.skills.lodash.highlights.1"),
+        t("skillsPage.skills.lodash.highlights.2"),
+      ],
+      links: [{ label: "Lodash Docs", href: "https://lodash.com/docs" }],
+    },
+    {
       id: "react-i18next",
       name: t("skillsPage.skills.react-i18next.name"),
-      category: "utilities",
+      category: "devops-and-tools",
       icon: "i18n",
       proficiency: 30,
       tags: ["localization", "internationalization", "translation"],
@@ -460,7 +498,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "jest",
       name: t("skillsPage.skills.jest.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "jest",
       proficiency: 20,
       tags: ["testing", "unit-testing", "integration"],
@@ -481,7 +519,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "webpack",
       name: t("skillsPage.skills.webpack.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "webpack",
       proficiency: 45,
       tags: ["bundler", "optimization", "loaders"],
@@ -496,7 +534,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "vite",
       name: t("skillsPage.skills.vite.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "vite",
       proficiency: 25,
       tags: ["build-tool", "dev-server", "esbuild"],
@@ -511,7 +549,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "electron",
       name: t("skillsPage.skills.electron.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "electron",
       proficiency: 45,
       tags: ["desktop-app", "cross-platform", "nodejs"],
@@ -528,7 +566,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "ci-cd",
       name: t("skillsPage.skills.ci-cd.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "ci-cd",
       proficiency: 55,
       tags: ["github-actions", "jenkins", "docker"],
@@ -545,7 +583,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "monorepo",
       name: t("skillsPage.skills.monorepo.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "monorepo",
       proficiency: 30,
       tags: ["nx", "lerna", "turborepo"],
@@ -560,7 +598,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "docker",
       name: t("skillsPage.skills.docker.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "docker",
       proficiency: 50,
       tags: ["containerization", "dev-env", "deployment"],
@@ -573,12 +611,10 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       links: [{ label: "Docker Docs", href: "https://docs.docker.com/" }],
     },
 
-    // --- Utility & Tooling (New) ---
-
     {
       id: "dayjs",
       name: t("skillsPage.skills.dayjs.name"),
-      category: "utilities",
+      category: "devops-and-tools",
       icon: "dayjs", // ⚠️ Make sure you add 'dayjs' to your iconMap
       proficiency: 10,
       tags: ["date-time", "lightweight", "immutable", "plugin-system"],
@@ -599,7 +635,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "date-fns",
       name: t("skillsPage.skills.date-fns.name"),
-      category: "utilities",
+      category: "devops-and-tools",
       icon: "date-fns",
       proficiency: 10,
       tags: ["functional", "tree-shakable", "immutable", "typescript"],
@@ -620,7 +656,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "moment-js",
       name: t("skillsPage.skills.moment-js.name"),
-      category: "utilities",
+      category: "devops-and-tools",
       icon: "moment-js", // ⚠️ Add 'moment-js' to iconMap if needed
       proficiency: 15,
       tags: ["legacy", "migration", "deprecated", "large-bundle"],
@@ -644,7 +680,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "immer",
       name: t("skillsPage.skills.immer.name"),
-      category: "utilities",
+      category: "devops-and-tools",
       icon: "immer",
       proficiency: 10,
       tags: ["immutability", "state-updates", "drafts"],
@@ -661,7 +697,7 @@ export const getSkills = (t: TFunction): Array<Skill> => {
     {
       id: "zod",
       name: t("skillsPage.skills.zod.name"),
-      category: "utilities",
+      category: "devops-and-tools",
       icon: "zod",
       proficiency: 10,
       tags: ["schema-validation", "runtime-validation", "typesafety"],
@@ -673,88 +709,50 @@ export const getSkills = (t: TFunction): Array<Skill> => {
       ],
       links: [{ label: "Zod Docs", href: "https://zod.dev/" }],
     },
+
     {
-      id: "recharts",
-      name: t("skillsPage.skills.recharts.name"),
-      category: "ui-ux",
-      icon: "recharts",
-      proficiency: 30,
-      tags: ["data-visualization", "charts", "d3-wrapper"],
-      description: t("skillsPage.skills.recharts.description"),
+      id: "ui-library-maintenance",
+      name: t("skillsPage.skills.ui-library-maintenance.name"),
+      category: "devops-and-tools",
+      icon: "ui-library",
+      proficiency: 50,
+      tags: ["design-system", "storybook", "documentation"],
+      description: t("skillsPage.skills.ui-library-maintenance.description"),
       highlights: [
-        t("skillsPage.skills.recharts.highlights.0"),
-        t("skillsPage.skills.recharts.highlights.1"),
-        t("skillsPage.skills.recharts.highlights.2"),
-      ],
-      links: [{ label: "Recharts Docs", href: "https://recharts.org/en-US/" }],
-    },
-    {
-      id: "react-hook-form",
-      name: t("skillsPage.skills.react-hook-form.name"),
-      category: "utilities",
-      icon: "react-hook-form",
-      proficiency: 20,
-      tags: ["form-management", "performance", "uncontrolled"],
-      description: t("skillsPage.skills.react-hook-form.description"),
-      highlights: [
-        t("skillsPage.skills.react-hook-form.highlights.0"),
-        t("skillsPage.skills.react-hook-form.highlights.1"),
-        t("skillsPage.skills.react-hook-form.highlights.2"),
+        t("skillsPage.skills.ui-library-maintenance.highlights.0"),
+        t("skillsPage.skills.ui-library-maintenance.highlights.1"),
+        t("skillsPage.skills.ui-library-maintenance.highlights.2"),
       ],
       links: [
-        { label: "React Hook Form Docs", href: "https://react-hook-form.com/" },
+        { label: "Storybook", href: "https://storybook.js.org/" },
+        {
+          label: "Design Systems Handbook",
+          href: "https://www.designbetter.co/design-systems-handbook",
+        },
       ],
     },
-
     {
-      id: "redux-saga",
-      name: t("skillsPage.skills.redux-saga.name"),
-      category: "react-ecosystem",
-      icon: "redux-saga",
-      proficiency: 55,
-      tags: ["side-effects", "middleware", "functional"],
-      description: t("skillsPage.skills.redux-saga.description"),
+      id: "accessibility",
+      name: t("skillsPage.skills.accessibility.name"),
+      category: "devops-and-tools",
+      icon: "accessibility",
+      proficiency: 15,
+      tags: ["wcag", "aria", "screen-readers"],
+      description: t("skillsPage.skills.accessibility.description"),
       highlights: [
-        t("skillsPage.skills.redux-saga.highlights.0"),
-        t("skillsPage.skills.redux-saga.highlights.1"),
-        t("skillsPage.skills.redux-saga.highlights.2"),
+        t("skillsPage.skills.accessibility.highlights.0"),
+        t("skillsPage.skills.accessibility.highlights.1"),
+        t("skillsPage.skills.accessibility.highlights.2"),
       ],
-      links: [{ label: "Redux Saga Docs", href: "https://redux-saga.js.org/" }],
-    },
-
-    {
-      id: "d3",
-      name: t("skillsPage.skills.d3.name"),
-      category: "ui-ux",
-      icon: "d3",
-      proficiency: 50,
-      tags: ["data-visualization", "svg", "manipulation"],
-      description: t("skillsPage.skills.d3.description"),
-      highlights: [
-        t("skillsPage.skills.d3.highlights.0"),
-        t("skillsPage.skills.d3.highlights.1"),
+      links: [
+        { label: "WebAIM", href: "https://webaim.org/" },
+        { label: "A11y Project", href: "https://www.a11yproject.com/" },
       ],
-      links: [{ label: "D3 Docs", href: "https://d3js.org/" }],
-    },
-    {
-      id: "emotion",
-      name: t("skillsPage.skills.emotion.name"),
-      category: "ui-ux",
-      icon: "emotion",
-      proficiency: 40,
-      tags: ["css-in-js", "theming", "performance"],
-      description: t("skillsPage.skills.emotion.description"),
-      highlights: [
-        t("skillsPage.skills.emotion.highlights.0"),
-        t("skillsPage.skills.emotion.highlights.1"),
-        t("skillsPage.skills.emotion.highlights.2"),
-      ],
-      links: [{ label: "Emotion Docs", href: "https://emotion.sh/" }],
     },
     {
       id: "story-book",
       name: t("skillsPage.skills.story-book.name"),
-      category: "dev-workflow",
+      category: "devops-and-tools",
       icon: "storybook",
       proficiency: 25,
       tags: ["documentation", "ui-testing", "components"],

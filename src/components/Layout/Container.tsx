@@ -13,7 +13,7 @@ export const Container: React.FC<ContainerProps> = ({
   return (
     <div
       className={twMerge(
-        "mx-auto w-full px-16 sm:px-12 lg:px-28 justify-center",
+        "mx-auto w-full px-8 sm:px-12 lg:px-28 justify-center",
         className
       )}
     >

@@ -179,10 +179,9 @@
     "categories": {
       "all": "Wszystkie",
       "core-programming": "Programowanie",
-      "react-ecosystem": "Ekosystem React",
-      "ui-ux": "UI/UX",
-      "dev-workflow": "Procesy deweloperskie",
-      "utilities": "Narzędzia"
+      "frontend-development": "Frontend",
+      "devops-and-tools": "Narzędzia",
+      "ui-ux": "UI/UX"
     },
     "details": {
       "title": "Szczegóły",

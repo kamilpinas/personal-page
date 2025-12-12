@@ -9,7 +9,7 @@ const ContactGrid: React.FC = () => {
   )
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-h-[46svh] overflow-y-auto md:max-h-none md:overflow-visible">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 overflow-y-auto p-2">
       {primaryMethods.map((method) => (
         <ContactMethodCard key={method.id} method={method} />
       ))}

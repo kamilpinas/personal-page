@@ -1,10 +1,9 @@
 import React from "react"
 import { Chip } from "../UI/Chip"
-// import { SkillCategory } from "../../lib/skills" // SkillCategory is no longer directly used here for type
 
 interface SkillLegendProps {
-  categories: string[] // Now contains translated category names
-  selectedCategory: string // Now receives a translated category name
+  categories: string[]
+  selectedCategory: string
   onSelectCategory: (category: string) => void
 }
 
@@ -19,8 +18,8 @@ export const SkillLegend: React.FC<SkillLegendProps> = ({
         {categories.map((category) => (
           <Chip
             key={category}
-            label={category} // Use the already translated category name
-            isActive={selectedCategory === category} // Compare with translated selectedCategory
+            label={category}
+            isActive={selectedCategory === category}
             onClick={() => onSelectCategory(category)}
           />
         ))}

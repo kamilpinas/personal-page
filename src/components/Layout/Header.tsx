@@ -12,9 +12,9 @@ export function Header() {
   const isHomePage = location.pathname === `/${lng}`
 
   return (
-    <header className="sticky top-0 z-50 bg-transparent backdrop-blur-lg">
+    <header className="sticky top-0 z-50 bg-transparent backdrop-blur-sm">
       <Container
-        className={`flex h-16 items-center ${
+        className={`flex pt-4 items-center ${
           isHomePage ? "justify-end" : "justify-between"
         }`}
       >

@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
       <main className="relative w-full overflow-hidden">
         <div className="after:absolute after:inset-0 after:pointer-events-none">
           <div className="mx-auto h-full grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-6 xl:px-8 py-[max(env(safe-area-inset-top),20px)]">
-            <div className="flex flex-col justify-center gap-6">
+            <div className="flex flex-col justify-center gap-6 p-2">
               <h1 className="text-[clamp(28px,4vw,44px)] font-semibold tracking-tight text-silver-300">
                 {t("contactPage.header")}
               </h1>
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
               />
             </div>
             {/* Contact Form always visible */}
-            <div className="col-span-1 md:col-span-1 flex justify-center">
+            <div className="col-span-1 md:col-span-1 flex justify-center p-2">
               <ContactForm />
             </div>
             {/* Contact Grid */}

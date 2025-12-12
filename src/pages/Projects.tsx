@@ -117,19 +117,20 @@ export default function ProjectsPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                                              <img
-                                                className="object-cover w-full h-full brightness-75 bg-black"
-                                                src={project.previewSrc}
-                                                alt={project.title}
-                                                loading="lazy"
-                                              />                      </a>
+                        <img
+                          className="object-cover w-full h-full brightness-75 bg-black"
+                          src={project.previewSrc}
+                          alt={project.title}
+                          loading="lazy"
+                        />
+                      </a>
                     )}
                   </Card>
                 ))}
               </CardSwap>
             </div>
           </div>
-          <div className="lg:col-span-4 col-span-6 flex flex-col justify-center gap-6">
+          <div className="lg:col-span-4 col-span-6 flex flex-col justify-center gap-4">
             <h1 className="text-[clamp(28px,4vw,44px)] font-semibold tracking-tight text-silver-300">
               {projects[activeIndex].title}
             </h1>
