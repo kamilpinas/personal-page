@@ -1,0 +1,695 @@
+{
+  "header": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "skills": "Umiejętności",
+    "resume": "CV",
+    "contact": "Kontakt",
+    "writing": "Artykuły",
+    "backToHome": "Powrót do strony głównej"
+  },
+  "homePage": {
+    "meta": {
+      "title": "Kamil Pinas - Frontend Developer & UI Engineer",
+      "description": "Portfolio Kamila Pinasa, Frontend Developera i Inżyniera UI specjalizującego się w dostępnych, wydajnych i zachwycających doświadczeniach webowych."
+    }
+  },
+  "writingPage": {
+    "meta": {
+      "title": "Artykuły i Spostrzeżenia Kamila Pinasa - Rozwój Frontend",
+      "description": "Przeczytaj artykuły i spostrzeżenia Kamila Pinasa na temat rozwoju frontendu, inżynierii UI i technologii internetowych."
+    },
+    "description": "To jest strona z artykułami."
+  },
+  "notFoundPage": {
+    "title": "404 - Strona nie znaleziona",
+    "pageNotFound": "Strona nie znaleziona",
+    "description": "Przepraszamy, strona, której szukasz, nie istnieje.",
+    "goHome": "Wróć do strony głównej",
+    "errorMessage": "Coś poszło nie tak."
+  },
+  "domeGallery": {
+    "warning": {
+      "imageCountExceedsTiles": "[DomeGallery] Podana liczba obrazów ({{imageCount}}) przekracza dostępne kafelki ({{availableTiles}}). Niektóre obrazy nie zostaną wyświetlone."
+    },
+    "ariaLabel": {
+      "openImage": "Otwórz obraz"
+    }
+  },
+  "tiles": {
+    "about": {
+      "title": "O mnie"
+    },
+    "projects": {
+      "title": "Projekty"
+    },
+    "contact": {
+      "title": "Kontakt"
+    },
+    "resume": {
+      "title": "CV"
+    },
+    "skills": {
+      "title": "Umiejętności"
+    }
+  },
+  "aboutPage": {
+    "meta": {
+      "title": "O Kamilu Pinasie - Frontend Developer & UI Engineer",
+      "description": "Dowiedz się więcej o Kamilu Pinasie, pasjonacie Frontend Developera i UI Engineera, jego filozofii, doświadczeniu i tym, co robi poza kodowaniem."
+    },
+    "title": "O mnie - {{name}}",
+    "portraitAlt": "Portret {{name}}",
+    "jobTitle": "Frontend Developer & UI Engineer",
+    "jobSubtitle": "Dostarczam cyfrowe wrażenia - błyskawiczne, przystępne i profesjonalne.",
+    "philosophy": {
+      "title": "Moja filozofia",
+      "content": "Podczas moich {{experienceYears}} lat doświadczenia doszedłem do przekonania, że najlepsze interfejsy internetowe rodzą się z głębokiego zrozumienia zarówno użytkownika, jak i technologii. Moim celem jest tworzenie aplikacji, które są nie tylko funkcjonalne i atrakcyjne wizualnie, ale także dostępne dla każdego i wydajne na każdym urządzeniu."
+    },
+    "experience": {
+      "title": "Czym się zajmuję",
+      "content": "Specjalizuję się w tworzeniu złożonych, interaktywnych i wysoce wydajnych interfejsów użytkownika, z naciskiem na nowoczesne technologie internetowe. Od projektowania responsywnych układów, które działają na każdym urządzeniu, po optymalizację wydajności aplikacji, jestem zaangażowany w tworzenie aplikacji internetowych, które są zarówno przyjazne dla użytkownika, jak i doskonałe technicznie."
+    },
+    "process": {
+      "title": "Mój proces",
+      "description": "Mój proces rozpoczyna się od głębokiego zanurzenia w cele projektu, gdzie skupiam się na zrozumieniu potrzeb użytkownika, aby stworzyć intuicyjne i dostępne interfejsy. Następnie przekładam te spostrzeżenia na funkcjonalny, wysokowydajny kod, dbając o dopracowanie każdego szczegółu. Wierzę we współpracę i iteracyjne podejście, ściśle współpracując z zespołami w celu dopracowania i udoskonalenia końcowego produktu."
+    },
+    "afterHours": {
+      "title": "Po godzinach",
+      "content": "Kiedy nie koduję, można mnie znaleźć odkrywającego nowe technologie, miejsca na świecie, lub kuchnie. Jestem także wielkim fanem gier, filmów i seriali, fascynuje mnie temat snów oraz sztucznej inteligencji. Skrywam też pewien sekret.",
+      "button": "Zobacz"
+    },
+    "stats": {
+      "age": "Wiek",
+      "years": "lat",
+      "experience": "Lata doświadczenia",
+      "projects": "Ukończone projekty",
+      "superheroes": "Zrankowani superbohaterowie",
+      "focus": "Główna specjalizacja"
+    },
+    "superheroes": {
+      "lotr": "Władca Pierścieni",
+      "peakyBlinders": "Peaky Blinders",
+      "mario": "Super Mario",
+      "avengers": "Avengers",
+      "got": "Gra o Tron",
+      "witcher": "Wiedźmin",
+      "shrek": "Shrek",
+      "superman": "Superman",
+      "batman": "Batman",
+      "wonder_woman": "Wonder Woman",
+      "spider_man": "Spider-Man",
+      "iron_man": "Iron Man",
+      "captain_america": "Kapitan Ameryka",
+      "thor": "Thor"
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Kontakt z Kamilem Pinasem - Frontend Developer do współpracy",
+      "description": "Skontaktuj się z Kamilem Pinasem w sprawie projektów frontendowych, inżynierii UI lub ogólnych zapytań. Dostępny do pracy na zlecenie/kontrakt."
+    },
+    "title": "Kontakt - {{name}}",
+    "header": "Stwórzmy razem coś wyjątkowego.",
+    "description": "Masz projekt do uruchomienia, interfejs do dopracowania lub problemy z wydajnością do naprawienia? Pomagam zespołom dostarczać intuicyjne, dostępne i szybkie interfejsy, które użytkownicy uwielbiają. Jestem dostępny do pracy na zlecenie/kontrakt i otwarty na rozmowy o pełnym etacie.",
+    "status": "Otwarty na propozycje",
+    "localTime": "Czas lokalny: {{time}}",
+    "reply": "Odpowiadam w ciągu 24h",
+    "form": {
+      "name": "Imię",
+      "email": "Email",
+      "message": "Wiadomość",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "fillFields": "Proszę wypełnić wszystkie pola.",
+      "messageSent": "Wiadomość wysłana! (Zapisano w konsoli)"
+    }
+  },
+  "projectsPage": {
+    "meta": {
+      "title": "Projekty Kamila Pinasa - Portfolio Frontend Developera",
+      "description": "Przegląd projektów frontendowych Kamila Pinasa, prezentujących wiedzę z inżynierii UI, Reacta i nowoczesnych technologii webowych."
+    },
+    "technologies": "Użyte technologie",
+    "redirect": "Odwiedź",
+    "project": {
+      "dukeFlooring": {
+        "title": "Duke Flooring",
+        "description": "Elegancka, nowoczesna strona internetowa dla firmy podłogowej, zaprojektowana w celu prezentacji ich produktów i usług z naciskiem na atrakcyjność wizualną i doświadczenie użytkownika."
+      },
+      "Haruoto": {
+        "title": "Haruoto",
+        "description": "Żywa i angażująca strona internetowa japońskiej restauracji, z interaktywnym menu i bezproblemowym systemem rezerwacji online."
+      },
+      "modular": {
+        "title": "Modular",
+        "description": "Wszechstronny i konfigurowalny sklep z meblami modułowymi, pozwalający użytkownikom projektować i wizualizować własne konfiguracje mebli w czasie rzeczywistym."
+      },
+      "przysnilo": {
+        "title": "Przysnilo.sie",
+        "description": "Pełnoprawna platforma do dziennikarstwa snów umożliwiająca zapisywanie, udostępnianie i eksplorację snów. Funkcje obejmują autoryzację użytkowników (JWT), edycję snów z formatowaniem tekstu, system głosowania, komentarze, statystyki snów z Chart.js, responsywny design z animacjami, dodawanie ilustracji, powiadomienia email oraz bezpieczne przechowywanie haseł (bcrypt)"
+      }
+    }
+  },
+  "resumePage": {
+    "meta": {
+      "title": "Kamil Pinas - CV | Frontend Developer & UI Engineer",
+      "description": "Zobacz i pobierz profesjonalne CV Kamila Pinasa, prezentujące jego doświadczenie jako Frontend Developera i Inżyniera UI."
+    },
+    "zoomIn": "Powiększ",
+    "zoomOut": "Pomniejsz",
+    "reset": "Resetuj",
+    "download": "Pobierz",
+    "language": {
+      "pl": "Polski",
+      "en": "Angielski"
+    }
+  },
+  "skillsPage": {
+    "meta": {
+      "title": "Umiejętności Kamila Pinasa - Ekspertyza w Frontend Development",
+      "description": "Odkryj umiejętności techniczne i ekspertyzę Kamila Pinasa, w tym React, TypeScript, projektowanie UI/UX, optymalizację wydajności i wiele innych."
+    },
+    "all": "Wszystkie",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Narzędzia",
+    "other": "Inne",
+    "categories": {
+      "all": "Wszystkie",
+      "core-programming": "Programowanie",
+      "react-ecosystem": "Ekosystem React",
+      "ui-ux": "UI/UX",
+      "dev-workflow": "Procesy deweloperskie",
+      "utilities": "Narzędzia"
+    },
+    "details": {
+      "title": "Szczegóły",
+      "description": "Najedź na umiejętność, aby zobaczyć jej szczegóły lub kliknij, aby ją zablokować.",
+      "level": "Poziom zaawansowania",
+      "experience": "Doświadczenie",
+      "projects": "Projekty",
+      "years": "{{count}} lata",
+      "year": "{{count}} rok",
+      "selectSkill": "Wybierz umiejętność, aby zobaczyć szczegóły",
+      "highlights": "Najważniejsze punkty",
+      "links": "Linki"
+    },
+    "skills": {
+      "typescript": {
+        "name": "TypeScript",
+        "description": "Zaawansowana biegłość w wykorzystywaniu statycznego systemu typów TypeScript do budowania skalowalnych, łatwych w utrzymaniu aplikacji. Ekspert w definiowaniu złożonych interfejsów typów, generyków, wyliczeń i typów narzędziowych, z głębokim zrozumieniem opcji kompilatora i konfiguracji za pomocą `tsconfig.json`.",
+        "highlights": [
+          "Tworzenie solidnych definicji typów dla złożonych struktur danych i odpowiedzi API",
+          "Implementacja zaawansowanych narzędzi typów i typów warunkowych dla narzędzi bezpiecznych typowo",
+          "Konfiguracja ścisłych opcji kompilatora TypeScript dla maksymalnego bezpieczeństwa typów"
+        ],
+        "links": {
+          "docs": "Dokumentacja TypeScript",
+          "deepDive": "TypeScript Deep Dive"
+        }
+      },
+      "html5": {
+        "name": "HTML5",
+        "description": "Głębokie zrozumienie semantycznych elementów HTML5, standardów dostępności internetowej (WCAG 2.1, WAI-ARIA) i nowoczesnych standardów internetowych. Doświadczenie w tworzeniu dostępnych, przyjaznych dla SEO znaczników, które działają we wszystkich nowoczesnych przeglądarkach i urządzeniach.",
+        "highlights": [
+          "Implementacja złożonych, dostępnych widżetów z odpowiednimi atrybutami ARIA",
+          "Optymalizacja struktury HTML pod kątem widoczności w wyszukiwarkach",
+          "Zapewnienie zgodności między przeglądarkami i progresywnego ulepszania"
+        ],
+        "links": {
+          "mdn": "MDN HTML Reference",
+          "wai": "Inicjatywa Dostępności Internetowej"
+        }
+      },
+      "css3": {
+        "name": "CSS3",
+        "description": "Ekspertyza w nowoczesnych funkcjach CSS, w tym Flexbox, Grid, zmiennych CSS i animacjach. Silne zrozumienie zasad responsywnego projektowania, architektury CSS (BEM, ITCSS) i technik optymalizacji wydajności dla stylizacji.",
+        "highlights": [
+          "Budowanie złożonych responsywnych układów za pomocą CSS Grid i Flexbox",
+          "Implementacja systemów motywów z niestandardowymi właściwościami CSS",
+          "Optymalizacja dostarczania CSS dla aplikacji krytycznych pod względem wydajności"
+        ],
+        "links": {
+          "cssTricks": "CSS-Tricks",
+          "mdn": "MDN CSS Reference"
+        }
+      },
+      "javascript": {
+        "name": "ES6+",
+        "description": "Głęboka znajomość nowoczesnych funkcji JavaScript, w tym składni ES6+, programowania asynchronicznego (Promises, async/await), koncepcji programowania funkcyjnego, modułów i najnowszych funkcji języka poprzez propozycje TC39.",
+        "highlights": [
+          "Implementacja złożonych asynchronicznych przepływów pracy z async/await",
+          "Wykorzystanie wzorców programowania funkcyjnego do transformacji danych",
+          "Optymalizacja wydajności JavaScript za pomocą nowoczesnych wzorców i technik"
+        ],
+        "links": {
+          "mdn": "MDN JavaScript",
+          "info": "JavaScript.info"
+        }
+      },
+      "performance-optimization": {
+        "name": "Optymalizacja wydajności",
+        "description": "Ekspertyza w optymalizacji wydajności aplikacji internetowych poprzez dzielenie kodu, leniwe ładowanie, optymalizację obrazów i efektywne strategie pobierania danych. Doświadczenie z Core Web Vitals i narzędziami do monitorowania wydajności.",
+        "highlights": [
+          "Poprawa wyników Lighthouse o ponad 40 punktów",
+          "Zmniejszenie rozmiaru pakietu poprzez dzielenie kodu i tree shaking",
+          "Implementacja budżetów wydajności i monitorowania"
+        ],
+        "links": {
+          "webVitals": "Web Vitals",
+          "lighthouse": "Lighthouse"
+        }
+      },
+      "web-security": {
+        "name": "Bezpieczeństwo sieciowe",
+        "description": "Silne zrozumienie zasad bezpieczeństwa internetowego, w tym Content Security Policy (CSP), zapobiegania Cross-Site Scripting (XSS), ochrony przed Cross-Site Request Forgery (CSRF) i bezpiecznych praktyk uwierzytelniania.",
+        "highlights": [
+          "Implementacja bezpiecznych przepływów uwierzytelniania za pomocą JWT",
+          "Konfiguracja nagłówków CSP dla zwiększonego bezpieczeństwa",
+          "Przeprowadzanie audytów bezpieczeństwa i ocen podatności"
+        ],
+        "links": {
+          "owasp": "OWASP Top 10"
+        }
+      },
+      "pwa": {
+        "name": "PWA",
+        "description": "Doświadczenie w budowaniu progresywnych aplikacji internetowych (PWA) z wykorzystaniem service workerów, możliwości offline, powiadomień push i funkcji instalowalnych. Znajomość najlepszych praktyk PWA i optymalizacji wydajności.",
+        "highlights": [
+          "Implementacja aplikacji offline-first z service workerami",
+          "Dodawanie możliwości powiadomień push",
+          "Optymalizacja PWA pod kątem Core Web Vitals"
+        ],
+        "links": {
+          "webDev": "Web.dev PWA"
+        }
+      },
+      "react": {
+        "name": "React & Hooks",
+        "description": "Biegłość w modelu komponentów React, w tym w komponentach funkcyjnych, hookach i zaawansowanych wzorcach zarządzania stanem i efektami. Ekspert w optymalizacji wydajności, dostępności i budowaniu bibliotek komponentów wielokrotnego użytku.",
+        "highlights": [
+          "Projektowanie dużych aplikacji React z zoptymalizowanym renderowaniem",
+          "Tworzenie niestandardowych hooków do ponownego wykorzystania złożonej logiki biznesowej",
+          "Implementacja zaawansowanych wzorców, takich jak komponenty złożone i render props"
+        ],
+        "links": {
+          "reactDocs": "Dokumentacja React",
+          "reactPatterns": "Wzorce React"
+        }
+      },
+      "lodash": {
+        "name": "Lodash",
+        "description": "Częste korzystanie z bibliotek narzędziowych, takich jak Lodash, do efektywnego i czytelnego manipulowania danymi, w tym transformacji tablic, łączenia obiektów, funkcji throttle i debounce.",
+        "highlights": [
+          "Implementacja ulepszeń wydajności za pomocą funkcji throttle/debounce Lodash",
+          "Upraszczanie złożonych operacji na tablicach",
+          "Zapewnienie czytelności kodu za pomocą standardowych metod narzędziowych"
+        ],
+        "links": {
+          "lodashDocs": "Dokumentacja Lodash"
+        }
+      },
+      "redux-toolkit": {
+        "name": "Redux Toolkit",
+        "description": "Doświadczenie w projektowaniu i implementacji złożonego stanu aplikacji za pomocą Redux Toolkit (RTK) do efektywnego, ustandaryzowanego i skalowalnego zarządzania stanami. Znajomość RTK Query do pobierania i buforowania danych.",
+        "highlights": [
+          "Implementacja znormalizowanych struktur stanu dla złożonych danych",
+          "Integracja oprogramowania pośredniczącego Redux dla efektów ubocznych (redux-saga, redux-observable)",
+          "Optymalizacja wydajności Redux za pomocą selektorów i memoizacji"
+        ],
+        "links": {
+          "rtkDocs": "Dokumentacja Redux Toolkit",
+          "rtkEssentials": "Redux Essentials"
+        }
+      },
+      "react-context": {
+        "name": "React Context API",
+        "description": "Efektywne wykorzystanie Context API do wstrzykiwania zależności i zarządzania globalnym stanem bez przekazywania propsów. Doświadczenie w technikach optymalizacji wydajności dla konsumentów kontekstu.",
+        "highlights": [
+          "Tworzenie dostawców motywów i uwierzytelniania za pomocą Context API",
+          "Optymalizacja aktualizacji kontekstu w celu zapobiegania niepotrzebnym ponownym renderowaniom",
+          "Łączenie wielu kontekstów dla złożonego zarządzania stanami"
+        ],
+        "links": {
+          "reactContextDocs": "Dokumentacja React Context"
+        }
+      },
+      "axios": {
+        "name": "Axios",
+        "description": "Ekspertyza w konfiguracji i wykorzystaniu klienta HTTP Axios do ustrukturyzowanych żądań danych, obsługi błędów i interceptorów. Doświadczenie w transformacji i anulowaniu żądań/odpowiedzi.",
+        "highlights": [
+          "Implementacja interceptorów uwierzytelniania dla tokenów JWT",
+          "Tworzenie niestandardowych klientów API z logiką ponawiania i obsługą błędów",
+          "Optymalizacja wydajności żądań za pomocą anulowania żądań"
+        ],
+        "links": {
+          "axiosDocs": "Dokumentacja Axios"
+        }
+      },
+      "tailwind-css": {
+        "name": "Tailwind CSS",
+        "description": "Ekspertyza w korzystaniu z frameworka utility-first Tailwind CSS do szybkiego budowania niestandardowych interfejsów użytkownika. Doświadczenie z trybem JIT, niestandardowymi konfiguracjami i integracją z bibliotekami komponentów.",
+        "highlights": [
+          "Implementacja responsywnych projektów z klasami utility Tailwind",
+          "Tworzenie niestandardowych wtyczek i konfiguracji",
+          "Optymalizacja kompilacji produkcyjnych za pomocą PurgeCSS"
+        ],
+        "links": {
+          "tailwindDocs": "Dokumentacja Tailwind CSS"
+        }
+      },
+      "react-router": {
+        "name": "React Router",
+        "description": "Implementacja dynamicznego routingu po stronie klienta za pomocą React Router v6+ do zarządzania widokami, parametrami URL i zagnieżdżonymi trasami. Doświadczenie z API ładowania i przesyłania danych.",
+        "highlights": [
+          "Implementacja złożonych zagnieżdżonych struktur routingu",
+          "Tworzenie chronionych tras z uwierzytelnianiem",
+          "Optymalizacja dzielenia kodu opartego na trasach"
+        ],
+        "links": {
+          "reactRouterDocs": "Dokumentacja React Router"
+        }
+      },
+      "material-ui": {
+        "name": "MUI",
+        "description": "Biegłość w korzystaniu i dostosowywaniu systemu komponentów Material UI, w tym theming, API stylizowanych komponentów i tworzenia niestandardowych komponentów, które integrują się z systemem projektowym.",
+        "highlights": [
+          "Dostosowywanie motywu MUI za pomocą tokenów projektowych",
+          "Tworzenie komponentów wielokrotnego użytku",
+          "Optymalizacja wydajności MUI za pomocą dynamicznego importowania"
+        ],
+        "links": {
+          "muiDocs": "Dokumentacja MUI"
+        }
+      },
+      "ui-library-maintenance": {
+        "name": "Utrzymanie systemu projektowego",
+        "description": "Sprawdzona umiejętność budowania, dokumentowania (np. Storybook) i utrzymywania scentralizowanej, wielokrotnego użytku wewnętrznej biblioteki komponentów UI. Zapewnia spójność i kontrolę wersji dla zasobów projektowych w wielu projektach.",
+        "highlights": [
+          "Tworzenie kompleksowej dokumentacji za pomocą Storybook",
+          "Implementacja automatycznych testów regresji wizualnej",
+          "Zarządzanie semantycznym wersjonowaniem i generowaniem changelogu"
+        ],
+        "links": {
+          "storybook": "Storybook",
+          "designSystemsHandbook": "Podręcznik systemów projektowych"
+        }
+      },
+      "styled-components": {
+        "name": "Styled Components",
+        "description": "Rozległe doświadczenie z rozwiązaniami CSS-in-JS, głównie Styled Components, do tworzenia dynamicznych, ograniczonych stylów związanych bezpośrednio z komponentami React. Silna kontrola nad themingiem i stylizacją opartą na propach.",
+        "highlights": [
+          "Budowanie solidnych rozwiązań themingowych obsługujących tryby ciemne/jasne",
+          "Wykorzystanie transient props do wariantów stylów",
+          "Utrzymywanie bezpieczeństwa typów w definicjach stylów"
+        ],
+        "links": {
+          "styledComponentsDocs": "Dokumentacja Styled Components"
+        }
+      },
+      "ag-grid": {
+        "name": "Ag-Grid",
+        "description": "Doświadczenie w implementacji i konfiguracji zaawansowanych, wysoce wydajnych siatek danych z Ag-Grid. Obejmuje funkcje takie jak wirtualizacja wierszy, operacje po stronie serwera, niestandardowe renderery komórek i filtrowanie podobne do Excela.",
+        "highlights": [
+          "Implementacja złożonych siatek danych z niestandardowymi edytorami komórek",
+          "Optymalizacja wydajności dla dużych zbiorów danych z wirtualizacją",
+          "Tworzenie niestandardowych wtyczek i rozszerzeń dla Ag-Grid"
+        ],
+        "links": {
+          "agGridDocs": "Dokumentacja Ag-Grid"
+        }
+      },
+      "accessibility": {
+        "name": "Dostępność (a11y)",
+        "description": "Silne zaangażowanie w budowanie dostępnych aplikacji internetowych zgodnych z wytycznymi WCAG 2.1. Doświadczenie z atrybutami ARIA, nawigacją klawiaturą, testowaniem czytników ekranu i audytami dostępności.",
+        "highlights": [
+          "Przeprowadzanie audytów dostępności i implementacja poprawek",
+          "Tworzenie dostępnych niestandardowych komponentów z odpowiednią obsługą klawiatury",
+          "Szkolenie zespołów z najlepszych praktyk dostępności"
+        ],
+        "links": {
+          "webAIM": "WebAIM",
+          "a11yProject": "Projekt A11y"
+        }
+      },
+      "git": {
+        "name": "Git",
+        "description": "Zaawansowana znajomość Git do wspólnego rozwoju, w tym strategii rozgałęziania (Git Flow, GitHub Flow), interaktywnego rebase'owania, cherry-picking i rozwiązywania złożonych konfliktów scalania.",
+        "highlights": [
+          "Implementacja hooków Git do kontroli jakości kodu",
+          "Zarządzanie dużymi bazami kodu z wieloma współtwórcami",
+          "Tworzenie niestandardowych aliasów i skryptów Git"
+        ],
+        "links": {
+          "gitDocs": "Dokumentacja Git",
+          "gitHubFlow": "Przepływ pracy GitHub"
+        }
+      },
+      "chrome-devtools": {
+        "name": "Chrome DevTools",
+        "description": "Eksperckie wykorzystanie narzędzi deweloperskich Chrome do profilowania wydajności, debugowania kodu JavaScript, inspekcji ruchu sieciowego, analizy pamięci i mapowania źródłowego. Doświadczenie z zaawansowanymi funkcjami, takimi jak panele wydajności i pamięci.",
+        "highlights": [
+          "Identyfikacja i naprawa wycieków pamięci w złożonych aplikacjach",
+          "Optymalizacja wydajności renderowania za pomocą panelu wydajności",
+          "Debugowanie złożonych warunków wyścigu z asynchronicznymi śladami stosu"
+        ],
+        "links": {
+          "chromeDevToolsDocs": "Dokumentacja Chrome DevTools"
+        }
+      },
+      "react-i18next": {
+        "name": "i18next",
+        "description": "Doświadczenie w implementacji przepływów pracy internacjonalizacji (i18n) i lokalizacji (l10n) za pomocą bibliotek takich jak i18next, zarządzanie plikami tłumaczeń i płynne przełączanie języków.",
+        "highlights": [
+          "Integracja i18n z przepływami pracy Next.js SSR",
+          "Zarządzanie pluralizacją i tłumaczeniami zależnymi od kontekstu",
+          "Konfiguracja wykrywania języka i mechanizmów awaryjnych"
+        ],
+        "links": {
+          "i18nextDocs": "Dokumentacja i18next"
+        }
+      },
+      "jest": {
+        "name": "Jest & RTL",
+        "description": "Doświadczenie w kompleksowych strategiach testowania, w tym testach jednostkowych, integracyjnych i end-to-end za pomocą Jest, React Testing Library i Cypress. Skupienie na testowaniu szczegółów implementacji i zachowania użytkownika.",
+        "highlights": [
+          "Osiąganie wysokiego pokrycia testami dla krytycznych ścieżek aplikacji",
+          "Tworzenie łatwych w utrzymaniu pakietów testów z najlepszymi praktykami",
+          "Implementacja testów regresji wizualnej"
+        ],
+        "links": {
+          "jestDocs": "Dokumentacja Jest",
+          "reactTestingLibrary": "Biblioteka testowa React"
+        }
+      },
+      "webpack": {
+        "name": "Webpack",
+        "description": "Głębokie zrozumienie konfiguracji Webpack, technik optymalizacji i rozwoju wtyczek. Doświadczenie z dzieleniem kodu, leniwym ładowaniem i optymalizacją wydajności.",
+        "highlights": [
+          "Optymalizacja wydajności kompilacji za pomocą buforowania i paralelizacji",
+          "Implementacja niestandardowych wtyczek i ładowarek Webpack",
+          "Konfiguracja złożonych potoków kompilacji dla wielu środowisk"
+        ],
+        "links": {
+          "webpackDocs": "Dokumentacja Webpack"
+        }
+      },
+      "vite": {
+        "name": "Vite",
+        "description": "Znajomość Vite jako narzędzia do budowania frontendu nowej generacji, wykorzystującego natywne moduły ES i esbuild do szybkiego serwera deweloperskiego i zoptymalizowanych kompilacji produkcyjnych.",
+        "highlights": [
+          "Migracja projektów z Webpack do Vite dla lepszego DX",
+          "Konfiguracja wtyczek Vite dla specyficznych potrzeb projektu",
+          "Optymalizacja konfiguracji Vite dla kompilacji produkcyjnych"
+        ],
+        "links": {
+          "viteDocs": "Dokumentacja Vite"
+        }
+      },
+      "electron": {
+        "name": "Electron",
+        "description": "Doświadczenie w tworzeniu, pakowaniu i wdrażaniu wieloplatformowych aplikacji desktopowych z wykorzystaniem technologii internetowych za pośrednictwem frameworka Electron. Znajomość natywnych API i optymalizacji wydajności.",
+        "highlights": [
+          "Budowanie i wdrażanie produkcyjnych aplikacji Electron",
+          "Implementacja natywnych funkcji i integracji",
+          "Optymalizacja wydajności i zużycia zasobów aplikacji Electron"
+        ],
+        "links": {
+          "electronDocs": "Dokumentacja Electron"
+        }
+      },
+      "ci-cd": {
+        "name": "CI/CD",
+        "description": "Doświadczenie w konfiguracji i utrzymywaniu potoków ciągłej integracji i wdrażania za pomocą narzędzi takich jak GitHub Actions, Jenkins i Docker. Znajomość automatycznego testowania i strategii wdrażania.",
+        "highlights": [
+          "Tworzenie zautomatyzowanych potoków wdrażania",
+          "Implementacja strategii wdrażania blue-green",
+          "Konfiguracja zautomatyzowanego testowania w CI/CD"
+        ],
+        "links": {
+          "gitHubActions": "GitHub Actions"
+        }
+      },
+      "monorepo": {
+        "name": "Zarządzanie monorepo",
+        "description": "Doświadczenie w zarządzaniu monorepo za pomocą narzędzi takich jak Nx, Lerna lub Turborepo. Znajomość zarządzania przestrzenią roboczą, zarządzania zależnościami i zoptymalizowanych procesów budowania w środowiskach monorepo.",
+        "highlights": [
+          "Migracja wielu repozytoriów do struktury monorepo",
+          "Optymalizacja czasów budowania z buforowaniem zadań i paralelizacją",
+          "Zarządzanie współdzielonymi zależnościami i wersjonowaniem"
+        ],
+        "links": {
+          "nxDocs": "Dokumentacja Nx"
+        }
+      },
+      "docker": {
+        "name": "Docker",
+        "description": "Doświadczenie w używaniu Dockera do tworzenia spójnych, odtwarzalnych środowisk deweloperskich i produkcyjnych. Umiejętność pisania Dockerfile, wykorzystywania Docker Compose i wdrażania skonteneryzowanych aplikacji.",
+        "highlights": [
+          "Konteneryzacja kompilacji frontendu dla powtarzalnego CI/CD",
+          "Konfiguracja lokalnych środowisk deweloperskich wielu usług za pomocą Docker Compose",
+          "Konfiguracja serwowania Nginx dla zoptymalizowanego dostarczania statycznych zasobów"
+        ],
+        "links": {
+          "dockerDocs": "Dokumentacja Docker"
+        }
+      },
+      "dayjs": {
+        "name": "Day.js",
+        "description": "Ultralekka (2kB) biblioteka dat z API podobnym do Moment.js. Używana do parsowania, walidacji, manipulacji i formatowania dat z minimalnym wpływem na rozmiar pakietu. Rozszerzalna za pomocą wtyczek takich jak strefa czasowa, localizedFormat i customParseFormat.",
+        "highlights": [
+          "Zastąpienie Moment.js w aplikacjach produkcyjnych w celu zmniejszenia rozmiaru pakietu o ~60KB",
+          "Wykorzystanie systemu wtyczek do obsługi stref czasowych bez zbędnego obciążenia",
+          "Spójne formatowanie dat w interfejsach użytkownika z obsługą lokalizacji"
+        ],
+        "links": {
+          "dayjsDocs": "Dokumentacja Day.js",
+          "pluginsList": "Lista wtyczek"
+        }
+      },
+      "date-fns": {
+        "name": "date-fns",
+        "description": "Nowoczesna, funkcjonalna biblioteka narzędzi do obsługi dat z doskonałym wsparciem dla TypeScript. Każda funkcja jest samodzielnym, tree-shakable modułem — idealnym do aplikacji krytycznych pod względem wydajności. Silny nacisk na niezmienność i czystość.",
+        "highlights": [
+          "Importowanie tylko potrzebnych funkcji w celu zminimalizowania rozmiaru pakietu",
+          "Wykorzystanie podmodułu FP do częściowo aplikowanych, komponowalnych operacji na datach",
+          "Obsługa złożonych obliczeń dat względnych (np. '3 dni temu') za pomocą formatDistance"
+        ],
+        "links": {
+          "dateFnsDocs": "Dokumentacja date-fns",
+          "fpGuide": "Przewodnik FP"
+        }
+      },
+      "moment-js": {
+        "name": "Moment.js (Legacy)",
+        "description": "Rozległe doświadczenie z Moment.js w starszych projektach — obecnie aktywnie migrowane ze względu na duży rozmiar, zmienne API i oficjalne wycofanie. Zrozumienie kompromisów i ścieżek migracji do Day.js lub date-fns.",
+        "highlights": [
+          "Prowadzenie migracji ponad 3 projektów z Moment.js do Day.js/date-fns",
+          "Tworzenie narzędzi do automatycznej refaktoryzacji kodu i wrapperów ułatwiających przejście",
+          "Dokumentowanie antywzorców i wąskich gardeł wydajności spowodowanych przez Moment"
+        ],
+        "links": {
+          "projectStatus": "Status projektu Moment.js",
+          "migrationGuide": "Przewodnik migracji"
+        }
+      },
+      "immer": {
+        "name": "Immer",
+        "description": "Umiejętność upraszczania niezmiennych aktualizacji stanu, zwłaszcza w reduktorach Redux lub Context, za pomocą Immer do pisania intuicyjnego kodu w stylu mutowalnym, który jest bezpiecznie konwertowany na niezmienne aktualizacje.",
+        "highlights": [
+          "Upraszczanie głęboko zagnieżdżonych aktualizacji stanu",
+          "Redukowanie boilerplate'u w reduktorach Redux",
+          "Zapewnienie spójności stanu z jasną logiką aktualizacji"
+        ],
+        "links": {
+          "immerDocs": "Dokumentacja Immer"
+        }
+      },
+      "zod": {
+        "name": "Zod",
+        "description": "Biegłość w używaniu Zod do walidacji w czasie wykonywania, która automatycznie wyprowadza typy TypeScript. Doskonałe do walidacji danych wejściowych API, zmiennych środowiskowych i schematów formularzy.",
+        "highlights": [
+          "Zapewnienie ścisłego bezpieczeństwa typów dla wszystkich przychodzących danych",
+          "Walidacja złożonych obiektów konfiguracyjnych przy uruchamianiu",
+          "Tworzenie złożonych, zagnieżdżonych schematów walidacji"
+        ],
+        "links": {
+          "zodDocs": "Dokumentacja Zod"
+        }
+      },
+      "recharts": {
+        "name": "Recharts",
+        "description": "Doświadczenie w budowaniu bogatych, interaktywnych wizualizacji danych za pomocą Recharts. Możliwość tworzenia niestandardowych osi, podpowiedzi i integrowania wykresów w środowiskach pulpitów nawigacyjnych.",
+        "highlights": [
+          "Tworzenie niestandardowych, responsywnych komponentów wykresów",
+          "Integracja złożonych potoków danych z wizualnymi wyświetlaczami",
+          "Zapewnienie dostępności i możliwości theming'u wykresów"
+        ],
+        "links": {
+          "rechartsDocs": "Dokumentacja Recharts"
+        }
+      },
+      "react-hook-form": {
+        "name": "React Hook Form",
+        "description": "Umiejętność używania React Hook Form do wysoce wydajnego, kontrolowanego/niekontrolowanego zarządzania formularzami, wykorzystującego natywne funkcje wydajności przeglądarki i minimalizującego niepotrzebne ponowne renderowanie.",
+        "highlights": [
+          "Osiąganie prawie zerowych ponownych renderowań podczas wprowadzania danych w formularzu",
+          "Implementacja dynamicznych tablic pól za pomocą useFieldArray",
+          "Integracja z Zod do walidacji opartej na schematach"
+        ],
+        "links": {
+          "reactHookFormDocs": "Dokumentacja React Hook Form"
+        }
+      },
+      "redux-saga": {
+        "name": "Redux Saga",
+        "description": "Biegłość w zarządzaniu złożonymi asynchronicznymi efektami ubocznymi w aplikacjach Redux za pomocą Redux Saga dla przewidywalnych przepływów stanu.",
+        "highlights": [
+          "Zarządzanie złożonymi warunkami wyścigu z anulowaniem Saga",
+          "Tworzenie ponownych do użytku obserwatorów i pracowników sag",
+          "Implementacja solidnej obsługi błędów w oprogramowaniu pośredniczącym"
+        ],
+        "links": {
+          "reduxSagaDocs": "Dokumentacja Redux Saga"
+        }
+      },
+      "d3": {
+        "name": "D3.js",
+        "description": "Fundamentalne zrozumienie D3.js dla bezpośredniej, szczegółowej kontroli nad manipulacją DOM opartą na danych i niestandardowych wizualizacjach, często używanej jako podstawa dla bibliotek wykresów wyższego poziomu.",
+        "highlights": [
+          "Tworzenie unikalnych, wysoce spersonalizowanych wykresów SVG",
+          "Implementacja wiązania danych i przejść"
+        ],
+        "links": {
+          "d3Docs": "Dokumentacja D3"
+        }
+      },
+      "emotion": {
+        "name": "@emotion",
+        "description": "Doświadczenie z Emotion do wysokowydajnego stylizowania CSS-in-JS, wykorzystujące jego możliwości do dynamicznego theming'u, ekstrakcji krytycznego CSS i kompozycji za pomocą właściwości `css`.",
+        "highlights": [
+          "Optymalizacja wydajności środowiska uruchomieniowego z niskim narzutem Emotion",
+          "Zarządzanie złożonymi obiektami motywów",
+          "Tworzenie bibliotek komponentów za pomocą narzędzi styled i css"
+        ],
+        "links": {
+          "emotionDocs": "Dokumentacja Emotion"
+        }
+      },
+      "story-book": {
+        "name": "Storybook",
+        "description": "Rozległe doświadczenie w używaniu Storybook do tworzenia, dokumentowania i testowania komponentów UI w izolacji. Biegłość w ArgsTable, kontrolkach i tworzeniu efektywnej dokumentacji komponentów.",
+        "highlights": [
+          "Tworzenie katalogów komponentów dla wielu projektów",
+          "Integracja dodatków do testowania komponentów",
+          "Wykorzystanie strony Docs do kompleksowych przewodników po użyciu komponentów"
+        ],
+        "links": {
+          "storybookDocs": "Dokumentacja Storybook"
+        }
+      }
+    }
+  }
+}
