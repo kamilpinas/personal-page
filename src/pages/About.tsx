@@ -53,71 +53,63 @@ const About: React.FC = () => {
                 {t("aboutPage.jobSubtitle")}
               </h2>
               <div className="space-y-6 text-[clamp(12px,1.4vw,14px)] leading-relaxed  text-justify">
-                <div className="flex items-start gap-4">
-                  <img
-                    src={"/images/books.png"}
-                    className="w-8 h-6 object-cover mt-1"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-silver-300 mb-1">
-                      {t("aboutPage.philosophy.title")}
-                    </h3>
-                    <p className="text-[#cfd3da]">
-                      {t("aboutPage.philosophy.content", { experienceYears })}
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-silver-300 mb-1 inline-flex items-center gap-3">
+                    <img
+                      src={"/images/books.png"}
+                      className="w-8 h-6 object-cover"
+                      loading="lazy"
+                    />
+                    {t("aboutPage.philosophy.title")}
+                  </h3>
+                  <p className="text-[#cfd3da]">
+                    {t("aboutPage.philosophy.content", { experienceYears })}
+                  </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <img
-                    src={"/images/briefcase.png"}
-                    className="w-12 h-8 object-cover mt-1"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-silver-300 mb-1">
-                      {t("aboutPage.experience.title")}
-                    </h3>
-                    <p className="text-[#cfd3da]">
-                      {t("aboutPage.experience.content")}
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-silver-300 mb-1 inline-flex items-center gap-3">
+                    <img
+                      src={"/images/briefcase.png"}
+                      className="w-8 h-8 object-cover"
+                      loading="lazy"
+                    />
+                    {t("aboutPage.experience.title")}
+                  </h3>
+                  <p className="text-[#cfd3da]">
+                    {t("aboutPage.experience.content")}
+                  </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <img
-                    src={"/images/process.png"}
-                    className="w-12 h-8 object-cover mt-1"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-silver-300 mb-1">
-                      {t("aboutPage.process.title")}
-                    </h3>
-                    <p className="text-[#cfd3da]">
-                      {t("aboutPage.process.description")}
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-silver-300 mb-1 inline-flex items-center gap-3">
+                    <img
+                      src={"/images/process.png"}
+                      className="w-8 h-8 object-cover"
+                      loading="lazy"
+                    />
+                    {t("aboutPage.process.title")}
+                  </h3>
+                  <p className="text-[#cfd3da]">
+                    {t("aboutPage.process.description")}
+                  </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <img
-                    src={"/images/plane.png"}
-                    className="w-10 h-6 object-cover mt-1"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-silver-300 mb-1">
-                      {t("aboutPage.afterHours.title")}
-                    </h3>
-                    <p className="text-[#cfd3da]">
-                      {t("aboutPage.afterHours.content")}{" "}
-                      <button
-                        onClick={() => setIsModalOpen(true)}
-                        className="ml-2 text-blue-400 hover:underline"
-                      >
-                        {t("aboutPage.afterHours.button")}
-                      </button>
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-silver-300 mb-1 inline-flex items-center gap-3">
+                    <img
+                      src={"/images/plane.png"}
+                      className="w-8 h-6 object-cover"
+                      loading="lazy"
+                    />
+                    {t("aboutPage.afterHours.title")}
+                  </h3>
+                  <p className="text-[#cfd3da]">
+                    {t("aboutPage.afterHours.content")}{" "}
+                    <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="ml-2 text-white font-bold text-sm hover:underline"
+                    >
+                      {t("aboutPage.afterHours.button")}
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>

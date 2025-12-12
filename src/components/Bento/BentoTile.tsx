@@ -23,18 +23,21 @@ export function BentoTile({
   const isHovered = hoveredCard === id
   const isAnyHovered = hoveredCard !== null
   const opacity = isAnyHovered ? (isHovered ? 1 : 0.4) : 1
-  const isPlaying = hoveredCard === null || isHovered // This is the core logic change
+  const isPlaying = hoveredCard === null || isHovered
 
   const textContent = (
     <div
-      className={`relative z-10 flex flex-col justify-start h-full w-full to-transparent pointer-events-none ${
+      className={`relative z-10 flex flex-col justify-start h-full w-full pointer-events-none ${
         wide ? "lg:w-2/5" : ""
       }`}
     >
-      <div className="p-4">
-        <div className="flex items-center gap-3">
+      <div className="p-4 relative">
+        <div className="flex items-center gap-3 relative">
           {icon && <Icon icon={icon} className="h-6 w-6 text-silver-300" />}
-          <h3 className="text-lg md:text-xl font-bold text-white">{title}</h3>
+          <h3 className="text-lg md:text-xl font-bold text-white relative z-10">
+            {title}
+            <span className="absolute inset-0 bg-black/50 blur-md -z-10 rounded"></span>
+          </h3>
         </div>
       </div>
     </div>

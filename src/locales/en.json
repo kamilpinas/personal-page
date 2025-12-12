@@ -65,20 +65,20 @@
     "jobSubtitle": "I build accessible, performant, and delightful web experiences.",
     "philosophy": {
       "title": "My Philosophy",
-      "content": "In my {{experienceYears}} years of experience, I've come to believe that the best web interfaces are born from a deep understanding of both the user and the technology. My goal is to create applications that are not only functional and visually appealing but also accessible to everyone and performant on any device."
+      "content": "The best interfaces are born where technology meets people. After {{experienceYears}} years in UI, I've learned that understanding users and perfecting every detail is key. I create applications that are smooth, visually striking, and accessible to everyone—without compromise."
     },
     "experience": {
       "title": "What I Do",
-      "content": "I specialize in building complex, interactive, and high-performing user interfaces with a focus on modern web technologies. From designing responsive layouts that work on any device to optimizing application performance, I am committed to creating web experiences that are both user-friendly and technically excellent."
+      "content": "I design complex, interactive, and high-performance user interfaces. From responsive layouts to performance optimization, every project is a blend of design and technical excellence. My apps are intuitive, user-friendly, and rock-solid under the hood."
     },
     "process": {
       "title": "My Process",
-      "description": "My process begins with a deep dive into the project's goals, where I focus on understanding the user's needs to create intuitive and accessible interfaces. I then translate these insights into functional, high-performance code, ensuring that every detail is polished. I believe in a collaborative and iterative approach, working closely with teams to refine and perfect the final product."
+      "description": "I start by deeply understanding the user's needs and the project's goals. Then, I translate these insights into efficient, polished code. I believe in collaboration and iteration—the best products are built in teams and refined continuously."
     },
     "afterHours": {
       "title": "After Hours",
-      "content": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or diving into the world of video games. I am also a huge fan of superheroes, and if you're curious about my taste, you can check out my personal ranking.",
-      "button": "Here is a list"
+      "content": "When I’m not coding, I’m exploring—new technologies, travel destinations, and world cuisines. I’m passionate about games, movies, and series, and fascinated by dreams and artificial intelligence. Oh, and I have a little secret… see for yourself.",
+      "button": "Check"
     },
     "stats": {
       "age": "Age",

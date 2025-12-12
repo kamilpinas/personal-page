@@ -65,19 +65,19 @@
     "jobSubtitle": "Dostarczam cyfrowe wrażenia - błyskawiczne, przystępne i profesjonalne.",
     "philosophy": {
       "title": "Moja filozofia",
-      "content": "Podczas moich {{experienceYears}} lat doświadczenia doszedłem do przekonania, że najlepsze interfejsy internetowe rodzą się z głębokiego zrozumienia zarówno użytkownika, jak i technologii. Moim celem jest tworzenie aplikacji, które są nie tylko funkcjonalne i atrakcyjne wizualnie, ale także dostępne dla każdego i wydajne na każdym urządzeniu."
+      "content": "Najlepsze interfejsy powstają tam, gdzie technologia spotyka człowieka. Po {{experienceYears}} latach pracy w UI wiem, że kluczem jest zrozumienie użytkownika i dopracowanie każdego szczegółu. Tworzę aplikacje, które działają płynnie, wyglądają świetnie i są dostępne dla każdego - bez kompromisów."
     },
     "experience": {
       "title": "Czym się zajmuję",
-      "content": "Specjalizuję się w tworzeniu złożonych, interaktywnych i wysoce wydajnych interfejsów użytkownika, z naciskiem na nowoczesne technologie internetowe. Od projektowania responsywnych układów, które działają na każdym urządzeniu, po optymalizację wydajności aplikacji, jestem zaangażowany w tworzenie aplikacji internetowych, które są zarówno przyjazne dla użytkownika, jak i doskonałe technicznie."
+      "content": "Projektuję złożone, interaktywne i superszybkie interfejsy. Od responsywnych układów po optymalizację wydajności - każdy projekt to połączenie designu i technicznej perfekcji. Moje aplikacje są intuicyjne, przyjazne użytkownikowi i solidne od strony kodu."
     },
     "process": {
       "title": "Mój proces",
-      "description": "Mój proces rozpoczyna się od głębokiego zanurzenia w cele projektu, gdzie skupiam się na zrozumieniu potrzeb użytkownika, aby stworzyć intuicyjne i dostępne interfejsy. Następnie przekładam te spostrzeżenia na funkcjonalny, wysokowydajny kod, dbając o dopracowanie każdego szczegółu. Wierzę we współpracę i iteracyjne podejście, ściśle współpracując z zespołami w celu dopracowania i udoskonalenia końcowego produktu."
+      "description": "Zaczynam od głębokiego zrozumienia potrzeb użytkownika i celu projektu. Następnie przekładam te insighty na wydajny, dopracowany kod. Wierzę w współpracę i iteracje - najlepsze produkty powstają w zespole i dzięki ciągłemu udoskonalaniu każdego detalu."
     },
     "afterHours": {
       "title": "Po godzinach",
-      "content": "Kiedy nie koduję, można mnie znaleźć odkrywającego nowe technologie, miejsca na świecie, lub kuchnie. Jestem także wielkim fanem gier, filmów i seriali, fascynuje mnie temat snów oraz sztucznej inteligencji. Skrywam też pewien sekret.",
+      "content": "Po pracy szukam inspiracji - w nowych technologiach, podróżach i kuchniach świata. Kocham gry, filmy i seriale, a fascynuje mnie świat snów i sztucznej inteligencji. A przy okazji… mam mały sekret. ",
       "button": "Zobacz"
     },
     "stats": {

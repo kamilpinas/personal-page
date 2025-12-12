@@ -20,7 +20,7 @@ export default function HomePage() {
         pageName="homePage"
       />
       <main
-        className="flex h-[80vh] flex-col items-center justify-center w-full"
+        className="flex h-[90vh] flex-col items-center justify-center w-full"
         onMouseLeave={() => setHoveredCard(null)}
       >
         <BentoGrid>
