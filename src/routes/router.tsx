@@ -52,6 +52,9 @@ export const router = createBrowserRouter([
     element: <Navigate to="/en" replace />,
   },
   {
+    path: "/sitemap.xml",
+  },
+  {
     element: <AppLayout />,
     errorElement: <ErrorPage />,
     children: [
