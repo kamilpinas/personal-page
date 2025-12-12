@@ -1,34 +1,45 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { useTranslation } from "react-i18next"
+import emailjs from "@emailjs/browser"
+import env from "@/lib/env"
 
 const ContactForm: React.FC = () => {
   const { t } = useTranslation()
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  const form = useRef<HTMLFormElement>(null)
   const [status, setStatus] = useState("")
   const [isSending, setIsSending] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!name || !email || !message) {
-      setStatus(t("contactPage.form.fillFields"))
-      return
-    }
+    if (!form.current) return
+
     setIsSending(true)
-    console.log({ name, email, message })
-    setTimeout(() => {
-      setStatus(t("contactPage.form.messageSent"))
-      setName("")
-      setEmail("")
-      setMessage("")
-      setIsSending(false)
-    }, 1000)
+    setStatus("")
+
+    emailjs
+      .sendForm(
+        env.emailJs.serviceId,
+        env.emailJs.templateId,
+        form.current,
+        env.emailJs.publicKey
+      )
+      .then(
+        () => {
+          setStatus(t("contactPage.form.messageSent"))
+          setIsSending(false)
+          form.current?.reset()
+        },
+        (error) => {
+          setStatus(t("contactPage.form.errorMessage"))
+          setIsSending(false)
+          console.error("FAILED...", error)
+        }
+      )
   }
 
   return (
     <div className="flex w-full rounded-2xl border border-silver-400/20 bg-gradient-to-br from-white/5 to-white/2 p-5 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-      <form onSubmit={handleSubmit} className="w-full">
+      <form ref={form} onSubmit={handleSubmit} className="w-full">
         <div className="mb-4">
           <label htmlFor="name" className="sr-only">
             {t("contactPage.form.name")}
@@ -36,9 +47,9 @@ const ContactForm: React.FC = () => {
           <input
             type="text"
             id="name"
+            name="user_name"
             placeholder={t("contactPage.form.name")}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            required
             className="w-full rounded-lg border border-silver-400/20 bg-transparent  text-silver-300 placeholder:text-text-muted px-3.5 py-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver-400/40 transition"
           />
         </div>
@@ -49,9 +60,9 @@ const ContactForm: React.FC = () => {
           <input
             type="email"
             id="email"
+            name="user_email"
             placeholder={t("contactPage.form.email")}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            required
             className="w-full rounded-lg border border-silver-400/20 bg-transparent text-silver-300 placeholder:text-text-muted px-3.5 py-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver-400/40 transition"
           />
         </div>
@@ -61,10 +72,10 @@ const ContactForm: React.FC = () => {
           </label>
           <textarea
             id="message"
+            name="user_message"
             placeholder={t("contactPage.form.message")}
             rows={5}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            required
             className="w-full rounded-lg border border-silver-400/20 bg-transparent text-silver-300 placeholder:text-text-muted px-3.5 py-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver-400/40 transition"
           ></textarea>
         </div>
