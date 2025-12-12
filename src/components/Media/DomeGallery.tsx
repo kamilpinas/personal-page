@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useCallback } from "react"
 import { useGesture } from "@use-gesture/react"
-import { useTranslation, TFunction } from "react-i18next"
+import { useTranslation } from "react-i18next"
+import { TFunction } from "i18next"
 
 type ImageItem = string | { src: string; alt?: string }
 
@@ -212,7 +213,10 @@ export default function DomeGallery({
     document.body.classList.remove("dg-scroll-lock")
   }, [])
 
-  const items = useMemo(() => buildItems(images, segments, t), [images, segments, t])
+  const items = useMemo(
+    () => buildItems(images, segments, t),
+    [images, segments, t]
+  )
 
   const applyTransform = (xDeg: number, yDeg: number) => {
     const el = sphereRef.current
@@ -995,4 +999,3 @@ export default function DomeGallery({
     </>
   )
 }
-

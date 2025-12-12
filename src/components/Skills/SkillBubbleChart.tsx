@@ -2,7 +2,6 @@ import React, { useMemo } from "react"
 import { hierarchy, pack } from "d3-hierarchy"
 import { motion } from "framer-motion"
 import { Skill } from "../../lib/skills"
-import { Tooltip } from "react-tooltip"
 import useResizeObserver from "use-resize-observer"
 
 interface SkillBubbleChartProps {

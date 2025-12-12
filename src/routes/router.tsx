@@ -13,7 +13,6 @@ const HomePage = lazy(() => import("../pages/Home"))
 const AboutPage = lazy(() => import("../pages/About"))
 const ProjectsPage = lazy(() => import("../pages/Projects"))
 const SkillsPage = lazy(() => import("../pages/Skills"))
-const WritingPage = lazy(() => import("../pages/Writing"))
 const ContactPage = lazy(() => import("../pages/Contact"))
 const ResumePage = lazy(() => import("../pages/Resume"))
 const ErrorPage = lazy(() => import("../pages/Error"))
@@ -60,7 +59,6 @@ export const router = createBrowserRouter([
       { path: "/:lng/about", element: <AboutPage /> },
       { path: "/:lng/projects", element: <ProjectsPage /> },
       { path: "/:lng/skills", element: <SkillsPage /> },
-      { path: "/:lng/writing", element: <WritingPage /> },
       { path: "/:lng/contact", element: <ContactPage /> },
       { path: "/:lng/resume", element: <ResumePage /> },
     ],

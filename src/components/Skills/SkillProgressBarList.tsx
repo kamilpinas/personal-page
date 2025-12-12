@@ -1,11 +1,10 @@
 import React from "react"
-import { Skill, SkillCategory } from "../../lib/skills"
+import { Skill } from "../../lib/skills"
 import { iconMap } from "../../lib/icons"
 
 interface SkillProgressBarListProps {
   skills: Skill[]
-
-  selectedCategory: SkillCategory | "all"
+  selectedCategory: string
   onSkillClick: (skillId: string) => void
 }
 

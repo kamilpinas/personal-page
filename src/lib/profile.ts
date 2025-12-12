@@ -1,11 +1,4 @@
 import { TFunction } from "i18next"
-import {
-  SiReact,
-  SiTypescript,
-  SiRedux,
-  SiNodedotjs,
-  SiWebpack,
-} from "react-icons/si"
 import { profileData } from "./data"
 
 export const profile = profileData
