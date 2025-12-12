@@ -78,7 +78,7 @@ export default function ProjectsPage() {
           <div className="col-span-6 lg:col-span-8 h-full flex items-center justify-center relative">
             <div
               ref={containerRef}
-              className="absolute left-28 md:left-1/2 -translate-x-1/2 bottom-1/3 w-[100%] md:w-[60%] lg:w-[70%] h-auto max-w-full"
+              className="absolute md:left-1/2 left-20 -translate-x-1/2 w-[100%] md:w-[60%] lg:w-[70%] h-auto max-w-full"
             >
               <CardSwap
                 cardDistance={-30}
