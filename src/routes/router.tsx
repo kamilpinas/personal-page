@@ -1,13 +1,15 @@
 import {
   createBrowserRouter,
-  Outlet,
+  useOutlet,
   useParams,
   Navigate,
+  useLocation,
 } from "react-router-dom"
-import { Suspense, lazy, useEffect } from "react"
+import { Suspense, lazy, useEffect, cloneElement } from "react"
 import { useTranslation } from "react-i18next"
 import { Header } from "../components/Layout/Header"
 import { Container } from "../components/Layout/Container"
+import { AnimatePresence, motion } from "framer-motion"
 
 const HomePage = lazy(() => import("../pages/Home"))
 const AboutPage = lazy(() => import("../pages/About"))
@@ -20,12 +22,17 @@ const ErrorPage = lazy(() => import("../pages/Error"))
 const AppLayout = () => {
   const { lng } = useParams()
   const { i18n } = useTranslation()
+  const location = useLocation()
+  const outlet = useOutlet()
 
   useEffect(() => {
     if (lng && i18n.language !== lng) {
       i18n.changeLanguage(lng)
     }
   }, [lng, i18n])
+
+  const isBackToHomeLocation =
+    location.pathname.endsWith("/en") || location.pathname.endsWith("/pl")
 
   return (
     <div className="flex min-h-screen flex-col relative">
@@ -39,7 +46,26 @@ const AppLayout = () => {
             </div>
           }
         >
-          <Outlet />
+          <AnimatePresence mode="wait">
+            {outlet && (
+              <motion.div
+                key={location.pathname}
+                initial={{
+                  opacity: 0,
+                  x: isBackToHomeLocation ? "-100%" : "100%",
+                }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{
+                  opacity: 0,
+                  x: isBackToHomeLocation ? "100%" : "-100%",
+                }}
+                transition={{ duration: 0.6 }}
+                className="h-full"
+              >
+                {cloneElement(outlet, { key: location.pathname })}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Suspense>
       </Container>
     </div>

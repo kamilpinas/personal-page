@@ -8,7 +8,7 @@ export function debounce<T extends (...args: any[]) => any>(
   func: T,
   delay: number
 ): T {
-  let timeout: number | null = null // Use number in browser
+  let timeout: number | null = null
 
   return function (this: any, ...args: Parameters<T>) {
     const context = this
@@ -21,6 +21,6 @@ export function debounce<T extends (...args: any[]) => any>(
       clearTimeout(timeout)
     }
 
-    timeout = window.setTimeout(later, delay) // Use window.setTimeout explicitly
+    timeout = window.setTimeout(later, delay)
   } as T
 }
