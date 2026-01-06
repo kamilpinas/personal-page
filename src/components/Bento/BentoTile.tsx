@@ -24,6 +24,7 @@ export function BentoTile({
   const isAnyHovered = hoveredCard !== null
   const opacity = isAnyHovered ? (isHovered ? 1 : 0.4) : 1
   const isPlaying = hoveredCard === null || isHovered
+  console.log("🚀 ~ BentoTile ~ isPlaying:", isPlaying, isHovered, opacity)
 
   const textContent = (
     <div
