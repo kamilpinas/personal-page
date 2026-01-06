@@ -31,8 +31,6 @@ export function HoverVideo({
 
   useEffect(() => {
     const video = internalVideoRef.current
-
-    console.log("IS PLAYING UEH", video, isPlaying)
     if (!video) return
 
     if (isPlaying) {
