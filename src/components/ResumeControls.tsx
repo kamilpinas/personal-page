@@ -7,8 +7,6 @@ interface ResumeControlsProps {
   onZoomOut: () => void
   onReset: () => void
   onDownload: () => void
-  selectedLanguage: "PL" | "ENG"
-  onLanguageChange: (language: "PL" | "ENG") => void
 }
 
 export default function ResumeControls({
@@ -16,8 +14,6 @@ export default function ResumeControls({
   onZoomOut,
   onReset,
   onDownload,
-  selectedLanguage,
-  onLanguageChange,
 }: ResumeControlsProps) {
   const { t } = useTranslation()
   return (
@@ -27,32 +23,6 @@ export default function ResumeControls({
       transition={{ type: "spring", stiffness: 100 }}
       className="flex items-center gap-4 p-2 bg-gray-900/50 backdrop-blur-sm rounded-full shadow-lg"
     >
-      <div className="flex gap-2">
-        <button
-          onClick={() => onLanguageChange("PL")}
-          className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-            selectedLanguage === "PL"
-              ? "bg-gray-700 text-white"
-              : "text-gray-400 hover:bg-gray-800"
-          }`}
-          data-tooltip-id="resume-tooltip"
-          data-tooltip-content="Polish"
-        >
-          PL
-        </button>
-        <button
-          onClick={() => onLanguageChange("ENG")}
-          className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-            selectedLanguage === "ENG"
-              ? "bg-gray-700 text-white"
-              : "text-gray-400 hover:bg-gray-800"
-          }`}
-          data-tooltip-id="resume-tooltip"
-          data-tooltip-content="English"
-        >
-          ENG
-        </button>
-      </div>
       <div className="flex items-center gap-2">
         <button
           onClick={onZoomOut}

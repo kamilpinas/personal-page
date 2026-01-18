@@ -3,7 +3,7 @@ import "react-pdf/dist/Page/AnnotationLayer.css"
 import "react-pdf/dist/Page/TextLayer.css"
 import cvPL from "../assets/CV_PL.pdf"
 import cvENG from "../assets/CV_ENG.pdf"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, useSpring } from "framer-motion"
 import { useGesture } from "@use-gesture/react"
 import ResumeControls from "../components/ResumeControls"
@@ -13,12 +13,14 @@ import PageMeta from "../components/SEO/PageMeta"
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
+  import.meta.url,
 ).toString()
 
 export default function ResumePage() {
-  const { t } = useTranslation()
-  const [language, setLanguage] = useState<"PL" | "ENG">("PL")
+  const { t, i18n } = useTranslation()
+  const [language, setLanguage] = useState<"PL" | "ENG">(
+    i18n.language.toUpperCase() === "PL" ? "PL" : "ENG",
+  )
   const [containerWidth, setContainerWidth] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
   const ref = useRef<HTMLDivElement>(null)
@@ -26,6 +28,10 @@ export default function ResumePage() {
   const x = useSpring(0, { stiffness: 300, damping: 30 })
   const y = useSpring(0, { stiffness: 300, damping: 30 })
   const scale = useSpring(1, { stiffness: 300, damping: 30 })
+
+  const handleI18nLanguageChange = useCallback((lang: string) => {
+    setLanguage(lang.toUpperCase() === "PL" ? "PL" : "ENG")
+  }, [])
 
   useEffect(() => {
     const updateContainerWidth = () => {
@@ -35,10 +41,14 @@ export default function ResumePage() {
     }
     updateContainerWidth()
     window.addEventListener("resize", updateContainerWidth)
+
+    i18n.on("languageChanged", handleI18nLanguageChange)
+
     return () => {
       window.removeEventListener("resize", updateContainerWidth)
+      i18n.off("languageChanged", handleI18nLanguageChange)
     }
-  }, [])
+  }, [i18n, handleI18nLanguageChange])
 
   useGesture(
     {
@@ -60,13 +70,8 @@ export default function ResumePage() {
       drag: { from: () => [x.get(), y.get()] },
       pinch: { from: () => [scale.get(), 0] },
       wheel: { eventOptions: { passive: false } },
-    }
+    },
   )
-
-  const handleLanguageChange = (lang: "PL" | "ENG") => {
-    setLanguage(lang)
-    handleReset()
-  }
 
   const handleDownload = () => {
     const link = document.createElement("a")
@@ -120,6 +125,7 @@ export default function ResumePage() {
             scale,
             touchAction: "none",
             cursor: "grab",
+            userSelect: "none",
           }}
           whileTap={{ cursor: "grabbing" }}
         >
@@ -135,8 +141,6 @@ export default function ResumePage() {
           onZoomOut={handleZoomOut}
           onReset={handleReset}
           onDownload={handleDownload}
-          selectedLanguage={language}
-          onLanguageChange={handleLanguageChange}
         />
         <Tooltip id="resume-tooltip" />
       </div>
