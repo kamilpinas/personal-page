@@ -52,6 +52,9 @@
     },
     "skills": {
       "title": "Umiejętności"
+    },
+    "experience": {
+      "title": "Doświadczenie"
     }
   },
   "aboutPage": {
@@ -126,10 +129,112 @@
       "messageSent": "Wiadomość wysłana!"
     }
   },
+  "experiencePage": {
+    "meta": {
+      "title": "Doświadczenie Kamila Pinasa - Podróż przez Frontend Development",
+      "description": "Poznaj zawodową ścieżkę Kamila Pinasa, Frontend Developera i UI Engineera, ze szczegółową osią czasu jego projektów i doświadczeń."
+    },
+    "showMore": "Pokaż więcej",
+    "showLess": "Pokaż mniej",
+    "showMoreTooltip": "Pokaż więcej szczegółów",
+    "showLessTooltip": "Pokaż mniej szczegółów",
+    "timeline": {
+      "zebra": {
+        "date": "Lis 2024 - Obecnie",
+        "title": "Zebra (Aurora Focus) - Platforma Wizji Przemysłowej i AI",
+        "subtitle": "Frontend Developer / UI Engineer",
+        "details": {
+          "0": "Projektowałem i rozwijałem aplikację desktopową (Electron) do obsługi procesów przemysłowych, integrując UI z backendami w Node.js oraz komponentami C++ odpowiedzialnymi za komunikację ze sprzętem.",
+          "1": "Budowałem warstwę komunikacji aplikacji: obsługa zdarzeń z urządzeń, stabilne kanały wymiany danych oraz odporność UI na chwilowe przerwy/niekompletne dane.",
+          "2": "Wykorzystałem PixiJS (WebGL) do renderowania dynamicznych wizualizacji o wysokiej częstotliwości (overlaye, znaczniki, podglądy), omijając ograniczenia wydajności klasycznego DOM.",
+          "3": "Optymalizowałem rendering: kontrola pętli renderującej, redukcja alokacji, ponowne użycie zasobów graficznych oraz ograniczanie kosztów repaint/reflow.",
+          "4": "Projektowałem stan aplikacji w React: podejście oparte o Context API i custom hooki, tak aby stan był przewidywalny, łatwy do debugowania i odporny na rozrost funkcji.",
+          "5": "Integrałem strumienie AI/OCR w czasie rzeczywistym z interfejsem: prezentacja wyników, aktualizacje na żywo oraz płynna pętla feedbacku operatora (oznaczanie/akceptacja/odrzucanie).",
+          "6": "Tworzyłem narzędzia operatorskie w UI: konfiguracje, profile, parametry procesów, walidacje oraz mechanizmy zabezpieczające przed błędną konfiguracją.",
+          "7": "Dbałem o stabilność aplikacji desktopowej: obsługa wyjątków, logowanie, scenariusze awaryjne oraz ograniczanie regresji przy rozbudowie modułów.",
+          "8": "Współpracowałem z zespołem wdrożeniowym/produkcyjnym, przekładając realne zachowania linii/stanowiska na wymagania interfejsu (ergonomia, czytelność, minimalizacja kliknięć)."
+        }
+      },
+      "duke": {
+        "date": "Sierpień 2024",
+        "title": "Strona internetowa Duke Flooring",
+        "subtitle": "Web Developer",
+        "details": {
+          "0": "Zbudowałem nowoczesną stronę typu SPA w React (Vite + Tailwind CSS), z naciskiem na szybkie ładowanie, responsywność oraz prostą edycję treści w przyszłości.",
+          "1": "Zaprojektowałem strukturę widoków i komponentów tak, aby łatwo skalować serwis o kolejne sekcje (np. realizacje, oferta, FAQ, kontakt) bez przepisywania fundamentów UI.",
+          "2": "Wdrożyłem podejście mobile-first: układy, siatkę, typografię oraz komponenty (nagłówki, karty, CTA) dopasowane do realnych zachowań użytkowników na telefonie.",
+          "3": "Dopracowałem warstwę SEO w zakresie możliwym dla SPA: semantyczne HTML, poprawna hierarchia nagłówków, meta tagi, opisy, OpenGraph oraz kontrola tytułów i opisów na podstronach/sekcjach.",
+          "4": "Zadbłem o dostępność: czytelny fokus klawiatury, poprawne etykiety, kontrasty oraz przewidywalną nawigację (praktyczne podejście zgodne z WCAG w typowych elementach UI).",
+          "5": "Zoptymalizowałem zasoby frontendu: kompresja i dobór formatów obrazów, lazy-loading, ograniczenie ciężkich zależności oraz kontrola rozmiaru bundla.",
+          "6": "Wdrożyłem formularze kontaktowe/lead generation: walidacja po stronie UI, czytelne stany błędów, zabezpieczenia przed spamem oraz spójne potwierdzenia wysyłki.",
+          "7": "Skonfigurowałem analitykę i podstawowe zdarzenia (np. kliknięcia CTA, wysłanie formularza), aby właściciel mógł mierzyć skuteczność strony i kampanii.",
+          "8": "Przygotowałem proces publikacji: środowisko, automatyczne buildy oraz wdrożenia (CI/CD), tak aby aktualizacje były szybkie i bezpieczne.",
+          "9": "Dostarczyłem uporządkowaną dokumentację przekazania: instrukcję edycji treści, opis struktury projektu i kluczowych decyzji technicznych."
+        }
+      },
+      "icsec": {
+        "date": "Paź 2023 - Mar 2024",
+        "title": "IcSec - SCADVANCE XP",
+        "subtitle": "Frontend Developer",
+        "details": {
+          "0": "Współtworzyłem interfejs użytkownika dla SCADVANCE XP – systemu IDS ukierunkowanego na monitoring sieci OT/SCADA, z naciskiem na pracę na zdarzeniach, alertach i danych telemetrycznych.",
+          "1": "Implementowałem widoki operacyjne: listy alertów, szczegóły incydentów, historia zdarzeń oraz ekrany ułatwiające analitykowi szybkie przejście od sygnału do kontekstu.",
+          "2": "Budowałem komponenty do prezentacji danych o wysokiej gęstości: rozbudowane tabele, filtrowanie wielokryterialne, sortowanie, paginacja oraz widoki porównawcze.",
+          "3": "Wdrażałem elementy wizualne wspierające analizę: wykresy/trendy oraz proste wizualizacje korelacji, tak aby ograniczyć „czas do diagnozy” po stronie użytkownika.",
+          "4": "Dbałem o spójność UX w aplikacji bezpieczeństwa: czytelne priorytety (severity), stany pustych danych, komunikaty błędów oraz przewidywalne akcje w interfejsie.",
+          "5": "Pracowałem z wymaganiami typowymi dla środowisk o podwyższonych wymaganiach: większa ostrożność w doborze bibliotek, kontrola ryzyk w UI oraz nacisk na stabilność i przewidywalność działania.",
+          "6": "Współpracowałem z zespołem przy iteracyjnym doprecyzowywaniu wymagań: przegląd makiet, dopinanie szczegółów zachowania komponentów oraz dopasowanie interfejsu do realnych procedur obsługi incydentów.",
+          "7": "Utrzymywałem jakość kodu poprzez refaktoryzację modułów UI, poprawki błędów oraz domykanie edge-case’ów wynikających z nietypowych danych wejściowych."
+        }
+      },
+      "b2b": {
+        "date": "Marzec 2022",
+        "title": "Uruchomienie firmy B2B",
+        "subtitle": "Założyciel",
+        "details": {
+          "0": "Założyłem własną firmę B2B w celu świadczenia specjalistycznych usług w zakresie rozwoju oprogramowania i doradztwa."
+        }
+      },
+      "tsr": {
+        "date": "Cze 2021 - Lis 2024",
+        "title": "TSR - Zarządzanie Pracownikami i Urządzeniami",
+        "subtitle": "Frontend Developer / UI Engineer",
+        "details": {
+          "0": "Rozwijałem i utrzymywałem aplikację B2B (React + TypeScript) do zarządzania użytkownikami, strukturą organizacyjną, uprawnieniami oraz flotą urządzeń w środowisku enterprise.",
+          "1": "Projektowałem i wdrażałem moduły UI oparte o podejście domenowe (podział na funkcjonalne obszary), dbając o czytelny podział odpowiedzialności i łatwość dalszego rozwoju.",
+          "2": "Implementowałem rozbudowane widoki list i szczegółów (CRUD), z obsługą walidacji, stanów przejściowych, błędów oraz spójnych komunikatów użytkownika (UX pod pracę na danych).",
+          "3": "Przygotowywałem zaawansowane tabele w AG Grid pod duże wolumeny danych: konfiguracja kolumn, niestandardowe renderery, filtrowanie wielopolowe, sortowanie, pinning, grupowanie oraz zapisywanie stanu tabeli.",
+          "4": "Optymalizowałem wydajność pracy na danych: minimalizacja zbędnych renderów, memoizacja, dzielenie kodu (lazy loading) oraz profilowanie w przeglądarce pod kątem wąskich gardeł.",
+          "5": "Tworzyłem interaktywne wizualizacje w D3.js dla metryk związanych z analizą obrazu (np. trendy czasowe, rozkłady, porównania serii), z naciskiem na czytelność i ergonomię analityczną.",
+          "6": "Dodawałem funkcje interakcji do wykresów (tooltipy, selekcje zakresu, zoom/skalowanie, wyróżnianie serii), tak aby użytkownik mógł szybko diagnozować anomalie i korelacje.",
+          "7": "Wdrożyłem eksport raportów po stronie klienta: generowanie PDF z widoków aplikacji, z dbałością o układ, paginację, spójne style i stabilność działania na różnych przeglądarkach.",
+          "8": "Standaryzowałem wzorce implementacyjne (komponenty współdzielone, typowanie, konwencje), co ograniczało dług techniczny i ułatwiało onboarding oraz code review.",
+          "9": "Współpracowałem z zespołem produktowym i backendem: doprecyzowywanie wymagań, rozbijanie funkcji na zadania, uzgadnianie kontraktów API oraz iteracyjne dopinanie UX pod realne scenariusze użytkowników.",
+          "10": "Dbałem o jakość wdrożeń poprzez systematyczne code review, poprawki regresji oraz utrzymanie stabilności kluczowych modułów w kolejnych wydaniach."
+        }
+      },
+      "bachelor": {
+        "date": "Styczeń 2021",
+        "title": "Inżynier z Informatyki",
+        "subtitle": "Katedra Informatyki Akademii Tarnowskiej",
+        "details": {
+          "0": "Ukończyłem studia inżynierskie z informatyki, zdobywając solidne podstawy w programowaniu, algorytmach i strukturach danych, bazach danych oraz architekturze aplikacji.",
+          "1": "Realizowałem projekty indywidualne i zespołowe, obejmujące analizę wymagań, projekt, implementację, testowanie oraz przygotowanie dokumentacji technicznej.",
+          "2": "Rozwinąłem praktyczne kompetencje inżynierskie: praca z systemem kontroli wersji, organizacja kodu, debugowanie, rozbijanie problemów na mniejsze zadania i konsekwentne domykanie funkcji.",
+          "3": "Zdobyłem doświadczenie w pracy z relacyjnymi bazami danych: modelowanie, normalizacja, tworzenie zapytań oraz projektowanie prostych warstw dostępu do danych.",
+          "4": "Wykształciłem nawyk pracy „pod utrzymanie”: czytelne interfejsy modułów, spójne nazewnictwo, komentarze tam gdzie mają sens oraz porządek w strukturze projektu."
+        }
+      }
+    }
+  },
   "projectsPage": {
     "meta": {
       "title": "Projekty Kamila Pinasa - Portfolio Frontend Developera",
       "description": "Przegląd projektów frontendowych Kamila Pinasa, prezentujących wiedzę z inżynierii UI, Reacta i nowoczesnych technologii webowych."
+    },
+    "experience": {
+      "title": "Doświadczenie",
+      "description": "Oś czasu mojej zawodowej podróży i kluczowych projektów."
     },
     "technologies": "Użyte technologie",
     "redirect": "Odwiedź",

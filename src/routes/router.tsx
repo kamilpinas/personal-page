@@ -17,6 +17,7 @@ const ProjectsPage = lazy(() => import("../pages/Projects"))
 const SkillsPage = lazy(() => import("../pages/Skills"))
 const ContactPage = lazy(() => import("../pages/Contact"))
 const ResumePage = lazy(() => import("../pages/Resume"))
+const ExperiencePage = lazy(() => import("../pages/Experience"))
 const ErrorPage = lazy(() => import("../pages/Error"))
 
 const AppLayout = () => {
@@ -90,6 +91,7 @@ export const router = createBrowserRouter([
       { path: "/:lng/skills", element: <SkillsPage /> },
       { path: "/:lng/contact", element: <ContactPage /> },
       { path: "/:lng/resume", element: <ResumePage /> },
+      { path: "/:lng/experience", element: <ExperiencePage /> },
     ],
   },
   {

@@ -1,5 +1,5 @@
 import { Tile } from "../types"
-import { User, Briefcase, Code, Mail, FileText } from "lucide-react"
+import { User, Briefcase, Code, Mail, FileText, Workflow } from "lucide-react"
 import { TFunction } from "i18next"
 
 export const getTilesData = (t: TFunction, lng: string): Tile[] => [
@@ -40,9 +40,17 @@ export const getTilesData = (t: TFunction, lng: string): Tile[] => [
     id: "projects",
     title: t("tiles.projects.title"),
     to: `/${lng}/projects`,
-    icon: Briefcase,
+    icon: Workflow,
     staticSrc: "/images/projects.jpg",
     videoSrc: "/movies/projects.mp4",
     wide: true,
+  },
+  {
+    id: "experience",
+    title: t("tiles.experience.title"),
+    to: `/${lng}/experience`,
+    icon: Briefcase,
+    staticSrc: "/images/experience.jpg",
+    videoSrc: "/movies/experience.mp4",
   },
 ]

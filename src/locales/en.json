@@ -52,6 +52,9 @@
     },
     "skills": {
       "title": "Skills"
+    },
+    "experience": {
+      "title": "Experience"
     }
   },
   "aboutPage": {
@@ -126,10 +129,112 @@
       "messageSent": "Message sent!"
     }
   },
+  "experiencePage": {
+    "meta": {
+      "title": "Experience of Kamil Pinas - Frontend Development Journey",
+      "description": "Explore the professional journey of Kamil Pinas, a Frontend Developer and UI Engineer, with a detailed timeline of his projects and experiences."
+    },
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "showMoreTooltip": "Show more details",
+    "showLessTooltip": "Show less details",
+    "timeline": {
+      "zebra": {
+        "date": "Nov 2024 - Present",
+        "title": "Zebra (Aurora Focus) - Industrial Vision & AI Platform",
+        "subtitle": "Frontend Developer / UI Engineer",
+        "details": {
+          "0": "I designed and developed a desktop application (Electron) for industrial operations, integrating the UI with Node.js backends and C++ components responsible for hardware communication.",
+          "1": "I built the application communication layer: handling device events, ensuring stable data channels, and keeping the UI resilient to temporary outages or incomplete data.",
+          "2": "I used PixiJS (WebGL) to render high-frequency dynamic visualizations (overlays, markers, previews), avoiding the performance limits of the traditional DOM.",
+          "3": "I optimized rendering performance by controlling the render loop, reducing allocations, reusing graphical resources, and limiting repaint/reflow costs.",
+          "4": "I designed application state in React using Context API and custom hooks, keeping state predictable, debuggable, and scalable as features grew.",
+          "5": "I integrated real-time AI/OCR streams into the UI: presenting results, live updates, and a smooth operator feedback loop (mark/accept/reject).",
+          "6": "I built operator tooling within the UI: configurations, profiles, process parameters, validations, and safeguards to prevent incorrect setup.",
+          "7": "I improved desktop app stability: exception handling, logging, failure scenarios, and regression reduction while expanding modules.",
+          "8": "I collaborated with deployment/production teams, translating real workstation and production-line workflows into UI requirements (ergonomics, readability, minimizing clicks)."
+        }
+      },
+      "duke": {
+        "date": "August 2024",
+        "title": "Duke Flooring Website",
+        "subtitle": "Web Developer",
+        "details": {
+          "0": "I built a modern SPA website using React (Vite + Tailwind CSS), focusing on fast load times, responsiveness, and a structure that supports easy future content updates.",
+          "1": "I designed the component and page structure to scale cleanly (e.g., portfolio, services, FAQ, contact) without rewriting UI foundations.",
+          "2": "I delivered a mobile-first experience: layout, grid, typography, and UI components (headings, cards, CTAs) aligned with real mobile user behavior.",
+          "3": "I improved SEO within the typical SPA constraints: semantic HTML, correct heading hierarchy, meta tags, descriptions, OpenGraph data, and controlled page/section titles and descriptions.",
+          "4": "I ensured practical accessibility best practices: clear keyboard focus states, correct labels, sufficient color contrast, and predictable navigation (aligned with common WCAG expectations for standard UI elements).",
+          "5": "I optimized frontend assets: image compression and format selection, lazy-loading, trimming heavy dependencies, and monitoring bundle size.",
+          "6": "I implemented lead capture/contact forms with client-side validation, clear error states, basic anti-spam protections, and consistent success feedback.",
+          "7": "I set up analytics and basic event tracking (e.g., CTA clicks, form submissions) so the business owner could measure website and campaign effectiveness.",
+          "8": "I prepared a reliable publishing flow: environment setup, automated builds, and deployments (CI/CD) to keep updates fast and safe.",
+          "9": "I delivered structured handover documentation: how to update content, project structure overview, and key technical decisions."
+        }
+      },
+      "icsec": {
+        "date": "Oct 2023 - Mar 2024",
+        "title": "IcSec - SCADVANCE XP",
+        "subtitle": "Frontend Developer / UI Engineer",
+        "details": {
+          "0": "I contributed to the UI for SCADVANCE XP—an IDS platform focused on OT/SCADA network monitoring—designed around events, alerts, and telemetry data.",
+          "1": "I implemented operational screens: alert lists, incident details, event history, and analyst-friendly views that help move quickly from signal to context.",
+          "2": "I built components for high-density data presentation: advanced tables, multi-criteria filtering, sorting, pagination, and comparison views.",
+          "3": "I delivered visual elements that support analysis: trends/charts and lightweight correlation-style views to reduce “time to diagnosis” for end users.",
+          "4": "I ensured consistent UX in a security-oriented application: clear severity levels, empty states, error messaging, and predictable actions across the interface.",
+          "5": "I worked within constraints typical for higher-assurance environments: careful library choices, UI risk control, and strong emphasis on stability and predictable behavior.",
+          "6": "I collaborated on iterative requirement refinement: reviewing mockups, finalizing component behaviors, and aligning UX with real incident-handling procedures.",
+          "7": "I improved code quality through UI refactors, bug fixes, and addressing edge cases triggered by irregular or unexpected input data."
+        }
+      },
+      "b2b": {
+        "date": "March 2022",
+        "title": "Launched B2B Company",
+        "subtitle": "Founder",
+        "details": {
+          "0": "Established a self-owned B2B company to provide specialized software development and consulting services."
+        }
+      },
+      "tsr": {
+        "date": "Jun 2021 - Nov 2024",
+        "title": "TSR - Workforce & Device Management",
+        "subtitle": "Frontend Developer / UI Engineer",
+        "details": {
+          "0": "I developed and maintained a B2B enterprise application (React + TypeScript) for managing users, organizational structure, permissions, and a device fleet.",
+          "1": "I designed and delivered domain-oriented UI modules (split into functional areas), focusing on clear separation of responsibilities and long-term maintainability.",
+          "2": "I implemented advanced list and detail views (CRUD) with validation, transitional/loading states, error handling, and consistent user-facing feedback (UX optimized for data-heavy workflows).",
+          "3": "I built complex AG Grid tables for large datasets: column configuration, custom cell renderers, multi-field filtering, sorting, pinning, grouping, and persisted grid state.",
+          "4": "I improved performance for data-heavy screens by reducing unnecessary re-renders, applying memoization, introducing code-splitting (lazy loading), and profiling bottlenecks in the browser.",
+          "5": "I created interactive D3.js visualizations for computer-vision-related metrics (e.g., time trends, distributions, multi-series comparisons), focusing on clarity and analytical usability.",
+          "6": "I added rich chart interactions (tooltips, range selection, zoom/scale, series highlighting) so users could quickly identify anomalies and correlations.",
+          "7": "I delivered client-side report export: generating PDFs directly from application views, with attention to layout, pagination, consistent styling, and cross-browser reliability.",
+          "8": "I standardized implementation patterns (shared components, strict typing, conventions), reducing technical debt and improving onboarding and code review efficiency.",
+          "9": "I worked closely with product and backend teams: refining requirements, breaking features into tasks, aligning API contracts, and iterating on UX based on real user scenarios.",
+          "10": "I helped keep releases stable through systematic code reviews, regression fixes, and ongoing maintenance of critical modules across multiple iterations."
+        }
+      },
+      "bachelor": {
+        "date": "January 2021",
+        "title": "Bachelor of Science in Computer Science",
+        "subtitle": "Katedra Informatyki Akademii Tarnowskiej",
+        "details": {
+          "0": "I completed a Bachelor of Engineering in Computer Science, building strong fundamentals in programming, algorithms and data structures, databases, and software architecture.",
+          "1": "I delivered both individual and team projects covering requirements analysis, design, implementation, testing, and technical documentation.",
+          "2": "I developed practical engineering habits: using version control, organizing codebases, debugging, breaking down problems, and consistently delivering completed features.",
+          "3": "I gained hands-on experience with relational databases: data modeling, normalization, writing queries, and designing simple data access layers.",
+          "4": "I built a maintainability-first mindset: clear module boundaries, consistent naming, purposeful comments, and clean project structure."
+        }
+      }
+    }
+  },
   "projectsPage": {
     "meta": {
       "title": "Projects by Kamil Pinas - Frontend Development Portfolio",
       "description": "Explore a selection of frontend development projects by Kamil Pinas, showcasing expertise in UI engineering, React, and modern web technologies."
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "A timeline of my professional journey and key projects."
     },
     "technologies": "Technologies used",
     "redirect": "Visit now",
