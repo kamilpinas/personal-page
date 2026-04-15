@@ -155,6 +155,21 @@
           "8": "Współpracowałem z zespołem wdrożeniowym/produkcyjnym, przekładając realne zachowania linii/stanowiska na wymagania interfejsu (ergonomia, czytelność, minimalizacja kliknięć)."
         }
       },
+      "miniBouncer": {
+        "date": "Wrzesień 2024",
+        "title": "Mini Bouncer - Platforma Wynajmu Eventowego",
+        "subtitle": "Frontend Developer / Designer",
+        "details": {
+          "0": "Stworzyłem wysokowydajną stronę typu landing page zorientowaną na konwersję dla butikowej firmy wynajmującej sprzęt eventowy, wykorzystując React 18 i Vite.",
+          "1": "Zaprojektowałem i wdrożyłem dynamiczny katalog produktów z kategoryzacją dla nowoczesnych dmuchanych zamków oraz zestawów soft play.",
+          "2": "Opracowałem płynne UI/UX przy użyciu Framer Motion, wdrażając animacje powiązane ze skrolowaniem i kaskadowe efekty wejścia, nadając stronie interaktywny charakter.",
+          "3": "Zintegrowałem bezpośrednie generowanie leadów poprzez EmailJS, umożliwiając przesyłanie zapytań rezerwacyjnych bezpośrednio z przeglądarki bez potrzeby dedykowanego backendu.",
+          "4": "Wdrożyłem kompleksową strategię SEO z użyciem React Helmet Async oraz danych strukturalnych JSON-LD w celu poprawy widoczności w lokalnych wynikach wyszukiwania.",
+          "5": "Zbudowałem bezpieczną typowo bibliotekę komponentów UI wielokrotnego użytku przy użyciu Tailwind CSS i Class Variance Authority (CVA).",
+          "6": "Skonfigurowałem automatyczny potok CI/CD w GitHub Actions do wdrażania aplikacji na globalną sieć Cloudflare Pages.",
+          "7": "Zoptymalizowałem aplikację pod kątem maksymalnej wydajności, osiągając błyskawiczne czasy ładowania i płynne interakcje na wszystkich urządzeniach mobilnych i desktopowych."
+        }
+      },
       "duke": {
         "date": "Sierpień 2024",
         "title": "Strona internetowa Duke Flooring",
@@ -242,6 +257,10 @@
       "dukeFlooring": {
         "title": "Duke Flooring",
         "description": "Elegancka, nowoczesna strona internetowa dla firmy podłogowej, zaprojektowana w celu prezentacji ich produktów i usług z naciskiem na atrakcyjność wizualną i doświadczenie użytkownika."
+      },
+      "miniBouncer": {
+        "title": "Mini Bouncer",
+        "description": "Wysokowydajna, estetyczna strona typu landing page zaprojektowana dla butikowej firmy wynajmującej sprzęt eventowy, specjalizującej się w nowoczesnych dmuchanych zamkach i zestawach soft play. Kładzie nacisk na doskonałe doświadczenie użytkownika dzięki płynnym animacjom, responsywności mobile-first i zoptymalizowanym ścieżkom konwersji."
       },
       "Haruoto": {
         "title": "Haruoto",

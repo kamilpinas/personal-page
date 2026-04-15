@@ -2,6 +2,22 @@ import { TFunction } from "i18next"
 
 export const getProjects = (t: TFunction) => [
   {
+    title: t("projectsPage.project.miniBouncer.title"),
+    description: t("projectsPage.project.miniBouncer.description"),
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Cloudflare",
+      "EmailJS",
+    ],
+    clipSrc: "/movies/mini-bouncer.mp4",
+    previewSrc: "/images/mini-bouncer.png",
+    link: "https://mini-bouncer.com",
+  },
+  {
     title: t("projectsPage.project.dukeFlooring.title"),
     description: t("projectsPage.project.dukeFlooring.description"),
     technologies: [

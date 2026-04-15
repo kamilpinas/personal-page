@@ -16,8 +16,10 @@ import {
   SiAxios,
   SiChartdotjs,
   SiReactrouter,
+  SiCloudflare,
 } from "react-icons/si"
 import PageMeta from "../components/SEO/PageMeta" // Import PageMeta
+import { FaEnvelope } from "react-icons/fa"
 
 const TechIcon = ({ tech }: { tech: string }) => {
   const iconMap: { [key: string]: JSX.Element } = {
@@ -34,6 +36,8 @@ const TechIcon = ({ tech }: { tech: string }) => {
     Axios: <SiAxios />,
     "Chart.js": <SiChartdotjs />,
     "React Router": <SiReactrouter />,
+    Cloudflare: <SiCloudflare />,
+    EmailJS: <FaEnvelope />,
   }
 
   return iconMap[tech] || <span>{tech}</span>

@@ -155,6 +155,21 @@
           "8": "I collaborated with deployment/production teams, translating real workstation and production-line workflows into UI requirements (ergonomics, readability, minimizing clicks)."
         }
       },
+      "miniBouncer": {
+        "date": "March 2026",
+        "title": "Mini Bouncer - Event Rental Platform",
+        "subtitle": "Frontend Developer / Designer",
+        "details": {
+          "0": "I developed a high-performance, conversion-focused landing page for a boutique event rental business using React 18 and Vite.",
+          "1": "I designed and implemented a dynamic product catalog with categorized displays for modern bounce houses and soft play equipment.",
+          "2": "I crafted a fluid UI/UX with Framer Motion, implementing scroll-linked animations and staggered entrance effects to create an engaging 'alive' feel.",
+          "3": "I integrated direct lead generation via EmailJS for seamless client-side booking inquiries without a dedicated backend.",
+          "4": "I implemented a comprehensive SEO strategy using React Helmet Async and JSON-LD structured data to enhance local search visibility.",
+          "5": "I built a type-safe, reusable UI component library using Tailwind CSS and Class Variance Authority (CVA).",
+          "6": "I established an automated CI/CD pipeline using GitHub Actions for deployment to Cloudflare Pages' global edge network.",
+          "7": "I optimized the application for maximum performance, achieving rapid load times and smooth interactions across all mobile and desktop devices."
+        }
+      },
       "duke": {
         "date": "August 2024",
         "title": "Duke Flooring Website",
@@ -173,7 +188,7 @@
         }
       },
       "icsec": {
-        "date": "Oct 2023 - Mar 2024",
+        "date": "Oct-Mar 2024",
         "title": "IcSec - SCADVANCE XP",
         "subtitle": "Frontend Developer / UI Engineer",
         "details": {
@@ -196,7 +211,7 @@
         }
       },
       "tsr": {
-        "date": "Jun 2021 - Nov 2024",
+        "date": "2021 - Oct 2024",
         "title": "TSR - Workforce & Device Management",
         "subtitle": "Frontend Developer / UI Engineer",
         "details": {
@@ -242,6 +257,10 @@
       "dukeFlooring": {
         "title": "Duke Flooring",
         "description": "A sleek, modern website for a flooring company, designed to showcase their products and services with a focus on visual appeal and user experience."
+      },
+      "miniBouncer": {
+        "title": "Mini Bouncer",
+        "description": "High-performance, aesthetic landing page for a boutique event rental business specializing in modern bounce houses and soft play setups. Emphasizes premium user experience with smooth animations, mobile-first responsiveness, and optimized conversion paths."
       },
       "Haruoto": {
         "title": "Haruoto",

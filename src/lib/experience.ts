@@ -1,4 +1,11 @@
-import { Briefcase, Code, GraduationCap, Rocket, Shield } from "lucide-react"
+import {
+  Briefcase,
+  Code,
+  GraduationCap,
+  Rocket,
+  Shield,
+  ComputerIcon,
+} from "lucide-react"
 import { TFunction } from "i18next"
 
 export type ExperienceItem = {
@@ -19,7 +26,17 @@ export const items = (t: TFunction): ExperienceItem[] => [
       .map((_, index) => t(`experiencePage.timeline.zebra.details.${index}`))
       .filter(Boolean),
   },
-
+  {
+    title: t("experiencePage.timeline.miniBouncer.date"),
+    cardTitle: t("experiencePage.timeline.miniBouncer.title"),
+    cardSubtitle: t("experiencePage.timeline.miniBouncer.subtitle"),
+    icon: ComputerIcon,
+    cardDetailedText: Array.from({ length: 8 })
+      .map((_, index) =>
+        t(`experiencePage.timeline.miniBouncer.details.${index}`),
+      )
+      .filter(Boolean),
+  },
   {
     title: t("experiencePage.timeline.duke.date"),
     cardTitle: t("experiencePage.timeline.duke.title"),
