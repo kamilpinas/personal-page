@@ -28,17 +28,21 @@ export function useAiChat() {
     async (text: string) => {
       const body = text.trim()
       if (!body || isLoading) return
+      if (body.length > 500) return
 
       const userMsg: ChatMessage = { role: "user", content: body }
       const next = [...messages, userMsg]
       setMessages(next)
       setIsLoading(true)
 
+      // keep greeting + last 19 messages so payload stays bounded
+      const toSend = next.length > 20 ? [next[0], ...next.slice(-19)] : next
+
       try {
         const res = await fetch(ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ messages: next }),
+          body: JSON.stringify({ messages: toSend }),
         })
         const data = await res.json()
         if (data.error) throw new Error(data.error)
