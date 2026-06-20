@@ -1,0 +1,11 @@
+/* ============================================================
+   CAST — liquid metal scroll experience
+   Barrel file. The actual styles live in styles/ — one file per act,
+   each owning the markup classes its section produces. Order matters:
+   base first (so :root vars are available), reduced-motion last (it
+   overrides via !important when the user opts out of animation).
+   ============================================================ */
+
+@import "./styles/base.css";
+@import "./styles/preloader.css";
+@import "./styles/hero.css";

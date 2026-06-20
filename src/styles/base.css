@@ -1,0 +1,194 @@
+:root {
+  --bg: #0a0a0b;
+  --bg-2: #101114;
+  --text: #e8eaee;
+  --dim: #868c99;
+  --dim-2: #4d525c;
+  --line: #1d2027;
+  --chrome-hi: #f7f9fc;
+  --font-display: "Clash Display", "Arial Black", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2e36 var(--bg);
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+  background: #d4dae4;
+  color: #0a0a0b;
+}
+::selection {
+  background: #d4dae4;
+  color: #0a0a0b;
+}
+
+/* visually hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* full-bleed studio backdrop behind every section */
+.studio {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 90% at 50% -20%,
+    #1a1c21 0%,
+    #121317 38%,
+    var(--bg) 72%
+  );
+}
+.studio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* animated film grain overlay */
+.grain {
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.9s steps(2) infinite;
+}
+@keyframes grain-shift {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(2%, -1.5%);
+  }
+  to {
+    transform: translate(-1.5%, 2%);
+  }
+}
+
+/* chrome gradient text utility, used across acts */
+.chrome-text {
+  background-image: linear-gradient(
+    177deg,
+    #fdfdfe,
+    #e6eaf0 14%,
+    #b9c0cc,
+    #5d646f 38%,
+    #23262c 47%,
+    #4a505a 52%,
+    #c3cad6,
+    #f8fafc 68%,
+    #9aa1ad 78%,
+    #41464f 90%,
+    #767d89
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* light-sweep sheen, triggered by JS adding .sheen-run */
+.sheen-host {
+  position: relative;
+  display: inline-block;
+}
+.sheen-host::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.95) 50%,
+    transparent 58%
+  );
+  background-size: 280% 100%;
+  background-position: -160% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  pointer-events: none;
+}
+.sheen-run::after {
+  animation: sheen-sweep 1.1s cubic-bezier(0.6, 0, 0.2, 1) forwards;
+}
+@keyframes sheen-sweep {
+  to {
+    background-position: 260% 0;
+  }
+}
+
+/* main liquid-sphere canvas, fixed behind every section */
+.metal-layer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.metal-pos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(140vh, 100vw);
+  aspect-ratio: 1;
+  transform: translate(var(--mx, -28%), -52%);
+  transition: transform 0.6s ease;
+}
+.metal-pos canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
