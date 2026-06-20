@@ -92,14 +92,19 @@ export function Maker() {
           </span>
         </h2>
         <p>
-          I build complex, data-intensive interfaces: dashboards, desktop
-          applications, and customer-facing products for clients spanning
-          various industries and the enterprise space.
+          I build complex, data-intensive interfaces that work at scale. Real-time
+          dashboards, desktop applications, customer-facing products. I love working
+          on systems where performance matters because the stakes are high.
         </p>
         <p>
-          AI assistance is genuinely part of my process, not something I lean on
-          as a crutch. It's woven in there to sharpen my decisions and maintain
-          momentum without sacrificing quality or cutting corners.
+          My background spans big data optimization (handling 100k+ rows), hardware
+          integration (Electron, live camera feeds), and shipping complete features
+          end-to-end. I care about the foundation too: code quality, security,
+          refactoring legacy patterns.
+        </p>
+        <p>
+          AI is genuinely part of my process. I use it to stay sharp and move faster,
+          not as a shortcut. The goal is always solid work, always shipped well.
         </p>
       </div>
 

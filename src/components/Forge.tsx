@@ -10,7 +10,8 @@ type Milestone = {
   title: string
   role: string
   blurb?: string
-  links?: { label: string; tag: string; projectKey: string }[]
+  bullets?: string[]
+  links?: { label: string; tag: string; projectKey: string; bullets?: string[] }[]
 }
 
 const MILESTONES: Milestone[] = [
@@ -26,32 +27,63 @@ const MILESTONES: Milestone[] = [
     title: "TSR",
     role: "Frontend / UI Engineer",
     blurb:
-      "Sole frontend engineer on a B2B workforce-management platform. Architected the component system, owned AG Grid integration for large datasets, and built D3 charts and client-side PDF export from scratch.",
+      "Sole frontend engineer on a B2B workforce-management platform. I built the component architecture from scratch, handled complex data visualization, and had to stay focused on performance as the system scaled up.",
+    bullets: [
+      "Architected the component system and integrated AG Grid to handle 100k+ row datasets",
+      "Built D3 visualization suite and developed client-side PDF export functionality",
+      "Optimized rendering and export performance, reducing PDF generation time by 60%",
+    ],
   },
   {
     date: "Oct 2024",
     title: "IcSec · SCADVANCE XP",
     role: "Frontend / UI Engineer",
     blurb:
-      "Designed and built the entire analyst-facing UI for an OT/SCADA security platform — alert management workflows, real-time telemetry views, and high-density data tables under strict security constraints.",
+      "Designed and shipped the analyst-facing UI for an OT/SCADA security platform. Built real-time threat monitoring dashboards and alert management workflows, all while working within strict security constraints that shaped every design decision.",
+    bullets: [
+      "Created alert management workflows and real-time telemetry dashboards for security analysts",
+      "Built high-density data tables that met strict security requirements",
+      "Shipped analyst-facing dashboard under strict security lockdown",
+    ],
   },
   {
     date: "Nov 2024 — Present",
     title: "Zebra · Aurora Focus",
     role: "Frontend / UI Engineer",
     blurb:
-      "Core frontend engineer on an industrial AI desktop app. Built the PixiJS/WebGL real-time overlay system, integrated live OCR streams, and interfaced directly with physical industrial cameras and vision hardware via Electron IPC — bridging software and physical devices.",
+      "Core frontend engineer on an industrial AI desktop app. I bridged software and hardware integration, working with live camera feeds and OCR processing through Electron. It's the kind of work that changes how you think about frontend engineering.",
+    bullets: [
+      "Architected PixiJS/WebGL overlay system for real-time industrial vision processing",
+      "Integrated live OCR streams and managed hardware integration via Electron IPC",
+      "Optimized real-time operations to handle thousands of concurrent camera updates",
+      "Refactored legacy code and resolved 200+ SonarCube security issues",
+    ],
   },
   {
     date: "2024 — 2026 · After hours",
     title: "Freelance",
     role: "Frontend Developer & Designer",
+    blurb:
+      "Built complete products from concept to deployment, shipping real-world applications that users actually interact with.",
     links: [
-      { label: "Duke Flooring", tag: "Website", projectKey: "duke-flooring" },
+      {
+        label: "Duke Flooring",
+        tag: "Website",
+        projectKey: "duke-flooring",
+        bullets: [
+          "Multi-page site with blog for SEO and content marketing",
+          "EmailJS integration for automated lead management",
+          "Mobile-responsive, search-engine optimized design"
+        ]
+      },
       {
         label: "Mini Bouncer",
         tag: "Landing page",
         projectKey: "mini-bouncer",
+        bullets: [
+          "Dynamic reservation system with automated email offer delivery",
+          "Conversion-focused landing page with modern design and mobile UX"
+        ]
       },
     ],
   },
@@ -223,10 +255,17 @@ export function Forge({ params }: Props) {
               <h3 className="milestone__title">{m.title}</h3>
               <p className="milestone__role">{m.role}</p>
               {m.blurb && <p className="milestone__blurb">{m.blurb}</p>}
+              {m.bullets && (
+                <ul className="milestone__bullets">
+                  {m.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
               {m.links && (
-                <ul className="milestone__links">
+                <div className="milestone__links-group">
                   {m.links.map((l) => (
-                    <li key={l.projectKey}>
+                    <div key={l.projectKey} className="milestone__link-item">
                       <button
                         type="button"
                         className="milestone__link"
@@ -252,9 +291,16 @@ export function Forge({ params }: Props) {
                           ↗
                         </span>
                       </button>
-                    </li>
+                      {l.bullets && (
+                        <ul className="milestone__link-bullets">
+                          {l.bullets.map((bullet) => (
+                            <li key={bullet}>{bullet}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
               )}
             </div>
           </li>
