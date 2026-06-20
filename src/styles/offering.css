@@ -139,6 +139,18 @@
   color: var(--dim-2);
 }
 
+@media (max-width: 859px) {
+  .offer {
+    /* the 58vh desktop top padding is stage room for the WebGL block to
+       coalesce above the title — on mobile that just reads as a huge
+       blank gap after the last casting card, so cut it way down */
+    padding-top: 16vh;
+  }
+  .offering-liquid {
+    top: -10%;
+  }
+}
+
 @media (max-width: 640px) {
   .offer__foot {
     flex-direction: column;
