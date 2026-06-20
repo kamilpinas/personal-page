@@ -4,7 +4,7 @@ import { useCallback, useState } from "react"
 // a Cloudflare Worker that wraps a chat completion API; the orb only
 // owns UI state — message history, input value, loading flag.
 
-const ENDPOINT = "https://ai-assistant.kamilpinas.workers.dev"
+const ENDPOINT = import.meta.env.VITE_AI_ENDPOINT as string
 
 const FALLBACK = {
   role: "assistant" as const,
