@@ -1,0 +1,216 @@
+.maker {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.maker__left,
+.maker__right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.maker__left {
+  right: calc(55% + min(18vw, 15rem) + clamp(1.5rem, 2.5vw, 2.5rem));
+  width: min(30vw, 25rem);
+  text-align: right;
+}
+.maker__right {
+  left: calc(55% + min(18vw, 15rem) + clamp(1.5rem, 2.5vw, 2.5rem));
+  width: min(20vw, 15rem);
+  text-align: left;
+}
+.maker__head {
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3.6vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-bottom: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.line-mask {
+  display: block;
+  overflow: hidden;
+}
+.line-inner {
+  display: block;
+}
+
+.maker__left p {
+  font-family: var(--font-mono);
+  font-size: clamp(0.78rem, 0.95vw, 0.9rem);
+  line-height: 1.8;
+  color: var(--dim);
+  margin: 0 0 1rem;
+}
+
+.maker__studs {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.2rem, 2.4vw, 2rem);
+}
+.maker__stud b {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  color: var(--text);
+}
+.maker__stud i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim-2);
+}
+
+.maker__portrait {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(35vw, 30rem);
+  border-radius: 4px;
+  z-index: 2;
+}
+.maker__portrait img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.maker-liquid {
+  position: absolute;
+  left: -16%;
+  right: -16%;
+  top: 100%;
+  margin-top: -10%;
+  height: clamp(7rem, 14vw, 11rem);
+  z-index: 1;
+  pointer-events: none;
+}
+.maker-liquid canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .maker {
+    height: auto;
+    min-height: 90vh;
+    padding: 12vh clamp(1.25rem, 5vw, 3rem);
+    display: grid;
+    grid-template-columns: 44% 1fr;
+    grid-template-areas:
+      "portrait left"
+      "portrait right";
+    align-items: center;
+    column-gap: clamp(1rem, 4vw, 2.5rem);
+  }
+  .maker__portrait {
+    grid-area: portrait;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    align-self: center;
+  }
+  .maker__left {
+    grid-area: left;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    align-self: end;
+    padding-bottom: 1.4rem;
+  }
+  .maker__right {
+    grid-area: right;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    align-self: start;
+  }
+  .maker__head {
+    font-size: clamp(1.4rem, 5vw, 2.4rem);
+  }
+  .maker__studs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 1.6rem;
+    margin-top: 1.2rem;
+  }
+  .maker__stud b {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .maker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: none;
+    grid-template-areas: none;
+    min-height: auto;
+    padding: 14vh 1.5rem 12vh;
+    column-gap: 0;
+  }
+  .maker__portrait {
+    order: -1;
+    width: min(64vw, 16rem);
+    margin: 0 0 2.6rem;
+    padding: 9px;
+    border-radius: 12px;
+    background: linear-gradient(
+      165deg,
+      #f4f6f9,
+      #b7bec9 18%,
+      #6a717c 38%,
+      #2a2e35 52%,
+      #8d95a1,
+      #e9edf2 88%,
+      #545b66
+    );
+    box-shadow: 0 26px 60px #00000080;
+  }
+  .maker__portrait img {
+    border-radius: 5px;
+  }
+  .maker__left {
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .maker__head {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+    margin-bottom: 1.3rem;
+  }
+  .maker__left p {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .maker__right {
+    margin-top: 2.2rem;
+  }
+  .maker__studs {
+    justify-content: center;
+    gap: 1.4rem 2rem;
+  }
+}

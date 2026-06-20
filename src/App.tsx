@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Lenis from "lenis"
 import { Preloader } from "./components/Preloader"
 import { Hero } from "./components/Hero"
+import { Maker } from "./components/Maker"
 import { REDUCED_MOTION } from "./motion"
 import { LiquidSphere } from "./webgl/LiquidSphere"
 import type { SphereParams } from "./webgl/LiquidSphere"
@@ -88,6 +89,7 @@ export default function App() {
       )}
 
       <Hero ignited={ignited} params={sphere} />
+      <Maker />
     </>
   )
 }
