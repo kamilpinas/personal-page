@@ -9,7 +9,6 @@ const SOCIALS = [
   { label: "GitHub", href: "https://github.com/kamilpinas" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kamil-pinas" },
   { label: "WhatsApp", href: "https://wa.me/48730697499" },
-  { label: "+48 730 697 499", href: "tel:+48730697499" },
 ]
 
 type Props = {
@@ -81,7 +80,10 @@ export function Offering({ params }: Props) {
           <span className="line-inner">Pour it</span>
         </span>
         <span className="line-mask">
-          <span className="line-inner sheen-host chrome-text" data-text="together">
+          <span
+            className="line-inner sheen-host chrome-text"
+            data-text="together"
+          >
             together
           </span>
         </span>

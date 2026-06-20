@@ -9,13 +9,13 @@ const ENDPOINT = import.meta.env.VITE_AI_ENDPOINT as string
 const FALLBACK = {
   role: "assistant" as const,
   content:
-    "I'm having trouble connecting to my brain right now. Please reach out to Kamil directly at kamilpinas@gmail.com!",
+    "I'm having trouble connecting to my brain right now. Please reach out to me directly at kamilpinas@gmail.com!",
 }
 
 const GREETING = {
   role: "assistant" as const,
   content:
-    "Hi, I'm Kamil's AI assistant. Ask me anything about his technical stack, engineering experience, or availability!",
+    "Hi, I'm Kamil. Ask me anything about my technical stack, engineering experience, or availability!",
 }
 
 export type ChatMessage = { role: "user" | "assistant"; content: string }
