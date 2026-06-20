@@ -123,10 +123,10 @@ export function Alloy({ params }: Props) {
       <div className="alloy__head">
         <h2>
           <span className="line-mask">
-            <span className="line-inner">The</span>
+            <span className="line-inner">What I'M</span>
           </span>
           <span className="line-mask">
-            <span className="line-inner chrome-text">composition</span>
+            <span className="line-inner chrome-text">MADE OF</span>
           </span>
         </h2>
       </div>

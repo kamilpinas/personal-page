@@ -49,7 +49,7 @@ float map(vec3 p) {
                      + 0.025 * sin(levelY * 2.0 + flow * 1.1);
   vec3 ta = vec3(0.0, levelY + levelRipple, 0.0);
   vec3 tb = vec3(0.0, poolY, 0.0);
-  float colR = mix(aspect + 0.1, 0.001, smoothstep(0.2, 1.0, reveal));
+  float colR = mix(aspect + 0.2, 0.001, smoothstep(0.2, 1.0, reveal));
   float column = sdCapsule(p, ta, tb, colR);
 
   // Smooth-union the two pieces — k tightens as reveal completes so the

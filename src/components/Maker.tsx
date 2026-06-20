@@ -92,14 +92,14 @@ export function Maker() {
           </span>
         </h2>
         <p>
-          I build complex, data-intensive interfaces — dashboards, desktop
-          applications, and customer-facing products — for clients across
-          industry and enterprise.
+          I build complex, data-intensive interfaces: dashboards, desktop
+          applications, and customer-facing products for clients spanning
+          various industries and the enterprise space.
         </p>
         <p>
-          AI assistance is part of how I work, not a crutch — woven into the
-          process to sharpen decisions and keep momentum without compromising
-          quality.
+          AI assistance is genuinely part of my process, not something I lean on
+          as a crutch. It's woven in there to sharpen my decisions and maintain
+          momentum without sacrificing quality or cutting corners.
         </p>
       </div>
 
