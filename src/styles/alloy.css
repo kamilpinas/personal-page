@@ -1,0 +1,116 @@
+.alloy {
+  position: relative;
+  z-index: 2;
+  padding: 18vh clamp(1.5rem, 5vw, 6rem) 16vh;
+}
+.alloy__head {
+  text-align: center;
+  margin-bottom: 6vh;
+}
+.alloy__head h2 {
+  font-weight: 600;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.alloy__ingot {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: clamp(5rem, 10vh, 10rem);
+  margin: 0 auto clamp(5rem, 10vh, 9rem);
+}
+.alloy-liquid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+.alloy-liquid canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.alloy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.alloy-col__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--silver-400, #c0c6cf);
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  margin-bottom: 1.7rem;
+}
+.bar__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+}
+.bar__name {
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 1vw, 0.95rem);
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+.bar__pct-wrap {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.bar__unit {
+  color: var(--dim-2);
+}
+.bar__track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+.bar__fill {
+  height: 100%;
+  transform-origin: left;
+  transform: scaleX(0);
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    #5a616b,
+    #aeb6c2 45%,
+    #f4f7fb 75%,
+    #cdd4de
+  );
+  box-shadow: 0 0 10px #d6dde859;
+}
+
+@media (max-width: 860px) {
+  .alloy__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 32rem;
+  }
+}
+
+html.reduced-motion .bar__fill {
+  transform: scaleX(var(--p, 0.5));
+}
+html.reduced-motion .alloy__ingot {
+  display: none;
+}

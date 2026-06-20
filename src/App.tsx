@@ -5,6 +5,8 @@ import Lenis from "lenis"
 import { Preloader } from "./components/Preloader"
 import { Hero } from "./components/Hero"
 import { Maker } from "./components/Maker"
+import { Forge } from "./components/Forge"
+import { Alloy } from "./components/Alloy"
 import { REDUCED_MOTION } from "./motion"
 import { LiquidSphere } from "./webgl/LiquidSphere"
 import type { SphereParams } from "./webgl/LiquidSphere"
@@ -90,6 +92,8 @@ export default function App() {
 
       <Hero ignited={ignited} params={sphere} />
       <Maker />
+      <Forge params={sphere} />
+      <Alloy params={sphere} />
     </>
   )
 }
