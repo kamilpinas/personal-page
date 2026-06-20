@@ -7,6 +7,22 @@
 .castings .act-label {
   z-index: 5;
 }
+.castings__head {
+  position: absolute;
+  top: clamp(1.5rem, 4vh, 3rem);
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+}
+.castings__head h2 {
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6.2vw, 5.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
 .castings__track {
   display: flex;
   height: 100%;
@@ -201,6 +217,15 @@
     overflow: visible;
     padding: 12vh 0;
   }
+  .castings__head {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    pointer-events: auto;
+    padding: 0 clamp(1.5rem, 6vw, 3rem);
+    margin-bottom: 5vh;
+  }
   .castings__track {
     flex-direction: column;
     height: auto;
@@ -227,6 +252,15 @@ html.reduced-motion .castings-liquid {
 html.reduced-motion .castings {
   height: auto;
   overflow: visible;
+}
+html.reduced-motion .castings__head {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  pointer-events: auto;
+  padding: 0 clamp(1.5rem, 6vw, 3rem);
+  margin-bottom: 5vh;
 }
 html.reduced-motion .castings__track {
   flex-direction: column;

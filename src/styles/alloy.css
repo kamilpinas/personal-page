@@ -9,7 +9,7 @@
 }
 .alloy__head h2 {
   font-weight: 600;
-  font-size: clamp(2rem, 4.6vw, 3.8rem);
+  font-size: clamp(2.6rem, 6.2vw, 5.2rem);
   line-height: 1.05;
   letter-spacing: -0.015em;
   text-transform: uppercase;

@@ -179,7 +179,15 @@ export function Castings({ params }: Props) {
 
   return (
     <section ref={rootRef} className="castings" aria-label="Projects">
-      <h2 className="sr-only">Cast works</h2>
+      <div className="castings__head">
+        <h2>
+          <span className="line-mask">
+            <span className="line-inner">
+              Cast <span className="chrome-text">Works</span>
+            </span>
+          </span>
+        </h2>
+      </div>
 
       <div className="castings__track" ref={trackRef}>
         {PROJECTS.map((p, i) => (
