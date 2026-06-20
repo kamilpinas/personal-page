@@ -86,11 +86,7 @@
 
 .maker-liquid {
   position: absolute;
-  left: -16%;
-  right: -16%;
-  top: 100%;
-  margin-top: -10%;
-  height: clamp(7rem, 14vw, 11rem);
+  inset: -8% -16%;
   z-index: 1;
   pointer-events: none;
 }
