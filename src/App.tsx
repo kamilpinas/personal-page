@@ -7,6 +7,7 @@ import { Hero } from "./components/Hero"
 import { Maker } from "./components/Maker"
 import { Forge } from "./components/Forge"
 import { Alloy } from "./components/Alloy"
+import { Castings } from "./components/Castings"
 import { REDUCED_MOTION } from "./motion"
 import { LiquidSphere } from "./webgl/LiquidSphere"
 import type { SphereParams } from "./webgl/LiquidSphere"
@@ -94,6 +95,7 @@ export default function App() {
       <Maker />
       <Forge params={sphere} />
       <Alloy params={sphere} />
+      <Castings params={sphere} />
     </>
   )
 }

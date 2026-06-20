@@ -1,0 +1,309 @@
+.castings {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  overflow: hidden;
+}
+.castings .act-label {
+  z-index: 5;
+}
+.castings__track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+.castings__seam {
+  --p: 0;
+  position: absolute;
+  bottom: clamp(1.6rem, 4.5vh, 3.2rem);
+  left: clamp(2rem, 7vw, 8rem);
+  right: clamp(2rem, 7vw, 8rem);
+  height: 2px;
+  z-index: 4;
+  pointer-events: none;
+  background: var(--line);
+  border-radius: 2px;
+}
+.seam__fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(var(--p));
+  border-radius: 2px;
+  background: linear-gradient(90deg, #5a616b, #aeb6c2 60%, #f4f7fb);
+  box-shadow: 0 0 10px #d6dde859;
+}
+.seam__node {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.seam__cube {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: conic-gradient(
+    from 0deg,
+    #f7fafc,
+    #6a717c,
+    #c6cdd8,
+    #2e333b,
+    #aeb6c2,
+    #50555e,
+    #f7fafc
+  );
+  box-shadow: inset 0 0 0 1px #ffffff1f;
+  opacity: 0.42;
+  filter: grayscale(0.3);
+  animation: cube-spin 7s linear infinite;
+  transition:
+    width 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4),
+    height 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4),
+    opacity 0.45s ease,
+    filter 0.45s ease,
+    box-shadow 0.45s ease;
+}
+.seam__node.lit .seam__cube {
+  width: 26px;
+  height: 26px;
+  opacity: 1;
+  filter: grayscale(0);
+  box-shadow:
+    inset 0 0 0 1px #ffffff40,
+    0 0 22px #d6dde88c;
+}
+@keyframes cube-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.seam__weld {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--p) * 100%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at 40% 35%,
+    #ffffff,
+    #cdd5e0 45%,
+    #6a717c 75%,
+    transparent 78%
+  );
+  box-shadow: 0 0 18px #e8eef7b3;
+}
+
+.casting {
+  position: relative;
+  flex: 0 0 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: 0 clamp(2rem, 7vw, 9rem);
+}
+.casting__media {
+  flex: 1 1 56%;
+  min-width: 0;
+}
+.casting__bezel {
+  position: relative;
+  padding: 12px;
+  border-radius: 14px;
+  background: linear-gradient(
+    150deg,
+    #f4f6f9,
+    #b7bec9 16%,
+    #6a717c 36%,
+    #2a2e35 52%,
+    #8d95a1,
+    #e9edf2 88%,
+    #545b66
+  );
+  box-shadow:
+    0 36px 90px #0000008c,
+    0 0 0 1px #ffffff0d;
+  overflow: hidden;
+  opacity: 0.35;
+  transform: scale(0.95);
+  filter: saturate(0.6);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.7s ease;
+}
+.casting.cast .casting__bezel {
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1);
+}
+.casting__bezel video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #0d0f13;
+}
+.casting__bezel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 58%
+  );
+  background-size: 280% 100%;
+  background-position: -160% 0;
+  pointer-events: none;
+}
+.casting.cast .casting__bezel::after {
+  animation: sheen-sweep 1.1s cubic-bezier(0.6, 0, 0.2, 1) 0.15s forwards;
+}
+
+.casting__info {
+  flex: 1 1 44%;
+  max-width: 30rem;
+  opacity: 0.3;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s ease 0.1s,
+    transform 0.6s ease 0.1s;
+}
+.casting.cast .casting__info {
+  opacity: 1;
+  transform: translateY(0);
+}
+.casting__index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--dim-2);
+}
+.casting__tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver-500, #b3bac5);
+  margin: 1.3rem 0 0.7rem;
+}
+.casting__title {
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.casting__desc {
+  font-family: var(--font-mono);
+  font-size: clamp(0.8rem, 1vw, 0.92rem);
+  line-height: 1.8;
+  color: var(--dim);
+  margin: 1.3rem 0 1.6rem;
+}
+
+.casting__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.casting__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition:
+    border-color 0.35s ease,
+    color 0.35s ease,
+    background 0.35s ease;
+}
+.casting__link:hover {
+  border-color: transparent;
+  color: #0d0f13;
+  background: linear-gradient(150deg, #f4f7fb, #aeb6c2 60%, #6a717c);
+}
+.casting__link span {
+  transition: transform 0.35s ease;
+}
+.casting__link:hover span {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 859px) {
+  .castings__seam {
+    display: none;
+  }
+  .castings {
+    height: auto;
+    overflow: visible;
+    padding: 12vh 0;
+  }
+  .castings__track {
+    flex-direction: column;
+    height: auto;
+  }
+  .casting {
+    flex: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 6vh clamp(1.5rem, 6vw, 3rem);
+    gap: 2rem;
+  }
+  .casting__bezel,
+  .casting__info {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+html.reduced-motion .castings__seam {
+  display: none;
+}
+html.reduced-motion .castings {
+  height: auto;
+  overflow: visible;
+}
+html.reduced-motion .castings__track {
+  flex-direction: column;
+  height: auto;
+}
+html.reduced-motion .casting {
+  flex: none;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 8vh clamp(2rem, 6vw, 6rem);
+}
+html.reduced-motion .casting__bezel,
+html.reduced-motion .casting__info {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
