@@ -15,7 +15,7 @@
 
 .castings-liquid {
   position: absolute;
-  bottom: 0;
+  bottom: -3rem;
   left: clamp(0.5rem, 2vw, 2rem);
   right: clamp(0.5rem, 2vw, 2rem);
   height: clamp(10rem, 24vh, 16rem);
