@@ -8,9 +8,11 @@ import { Maker } from "./components/Maker"
 import { Forge } from "./components/Forge"
 import { Alloy } from "./components/Alloy"
 import { Castings } from "./components/Castings"
+import { Offering } from "./components/Offering"
 import { REDUCED_MOTION } from "./motion"
 import { LiquidSphere } from "./webgl/LiquidSphere"
 import type { SphereParams } from "./webgl/LiquidSphere"
+import { CornerOrb } from "./webgl/CornerOrb"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -96,6 +98,8 @@ export default function App() {
       <Forge params={sphere} />
       <Alloy params={sphere} />
       <Castings params={sphere} />
+      <Offering params={sphere} />
+      <CornerOrb />
     </>
   )
 }

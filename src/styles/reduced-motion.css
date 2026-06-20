@@ -1,0 +1,23 @@
+html.reduced-motion .grain,
+html.reduced-motion .cue-rail::after,
+html.reduced-motion .marquee__track {
+  animation: none !important;
+}
+
+html.reduced-motion .pour,
+html.reduced-motion .intro-hide,
+html.reduced-motion .m-fill {
+  clip-path: none !important;
+  filter: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+html.reduced-motion .about__outlet {
+  display: none;
+}
+
+html.reduced-motion .metal-layer {
+  position: absolute;
+  height: 100vh;
+}
