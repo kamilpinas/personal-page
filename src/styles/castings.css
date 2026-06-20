@@ -13,91 +13,19 @@
   will-change: transform;
 }
 
-.castings__seam {
-  --p: 0;
+.castings-liquid {
   position: absolute;
-  bottom: clamp(1.6rem, 4.5vh, 3.2rem);
-  left: clamp(2rem, 7vw, 8rem);
-  right: clamp(2rem, 7vw, 8rem);
-  height: 2px;
+  bottom: 0;
+  left: clamp(1rem, 5vw, 5rem);
+  right: clamp(1rem, 5vw, 5rem);
+  height: clamp(6rem, 14vh, 9rem);
   z-index: 4;
   pointer-events: none;
-  background: var(--line);
-  border-radius: 2px;
 }
-.seam__fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform-origin: left;
-  transform: scaleX(var(--p));
-  border-radius: 2px;
-  background: linear-gradient(90deg, #5a616b, #aeb6c2 60%, #f4f7fb);
-  box-shadow: 0 0 10px #d6dde859;
-}
-.seam__node {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.seam__cube {
+.castings-liquid canvas {
+  width: 100%;
+  height: 100%;
   display: block;
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  background: conic-gradient(
-    from 0deg,
-    #f7fafc,
-    #6a717c,
-    #c6cdd8,
-    #2e333b,
-    #aeb6c2,
-    #50555e,
-    #f7fafc
-  );
-  box-shadow: inset 0 0 0 1px #ffffff1f;
-  opacity: 0.42;
-  filter: grayscale(0.3);
-  animation: cube-spin 7s linear infinite;
-  transition:
-    width 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4),
-    height 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4),
-    opacity 0.45s ease,
-    filter 0.45s ease,
-    box-shadow 0.45s ease;
-}
-.seam__node.lit .seam__cube {
-  width: 26px;
-  height: 26px;
-  opacity: 1;
-  filter: grayscale(0);
-  box-shadow:
-    inset 0 0 0 1px #ffffff40,
-    0 0 22px #d6dde88c;
-}
-@keyframes cube-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.seam__weld {
-  position: absolute;
-  top: 50%;
-  left: calc(var(--p) * 100%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle at 40% 35%,
-    #ffffff,
-    #cdd5e0 45%,
-    #6a717c 75%,
-    transparent 78%
-  );
-  box-shadow: 0 0 18px #e8eef7b3;
 }
 
 .casting {
@@ -223,6 +151,16 @@
   gap: 0.5rem;
   margin-bottom: 1.8rem;
 }
+.chip {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  background: #ffffff06;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
 
 .casting__link {
   display: inline-flex;
@@ -255,7 +193,7 @@
 }
 
 @media (max-width: 859px) {
-  .castings__seam {
+  .castings-liquid {
     display: none;
   }
   .castings {
@@ -283,7 +221,7 @@
   }
 }
 
-html.reduced-motion .castings__seam {
+html.reduced-motion .castings-liquid {
   display: none;
 }
 html.reduced-motion .castings {

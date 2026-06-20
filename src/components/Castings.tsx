@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { REDUCED_MOTION } from "../motion"
 import type { SphereParams } from "../webgl/LiquidSphere"
+import { CastingsLiquid } from "../webgl/sections/CastingsLiquid"
 
 type Project = {
   key: string
@@ -73,7 +74,7 @@ type Props = {
 export function Castings({ params }: Props) {
   const rootRef = useRef<HTMLElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
-  const seamRef = useRef<HTMLDivElement>(null)
+  const progressRef = useRef(0)
 
   useEffect(() => {
     const root = rootRef.current
@@ -155,7 +156,7 @@ export function Castings({ params }: Props) {
           end: () => "+=" + distance(),
           invalidateOnRefresh: true,
           onEnter: () => {
-            // no WebGL pool behind the projects — a CSS seam handles it
+            // no WebGL pool behind the projects — CastingsLiquid handles it
             params.current.pool = 0
             setActive(0)
           },
@@ -163,18 +164,7 @@ export function Castings({ params }: Props) {
           onUpdate: (self) => {
             const p = self.progress
             setActive(Math.round(p * (PROJECTS.length - 1)))
-            // drive the molten seam: weld travels left→right, nodes ignite
-            const seam = seamRef.current
-            if (seam) {
-              seam.style.setProperty("--p", String(p))
-              const nodes = seam.querySelectorAll<HTMLElement>(".seam__node")
-              nodes.forEach((n, i) =>
-                n.classList.toggle(
-                  "lit",
-                  p >= i / (PROJECTS.length - 1) - 0.01,
-                ),
-              )
-            }
+            progressRef.current = p
           },
         },
       })
@@ -237,21 +227,7 @@ export function Castings({ params }: Props) {
         ))}
       </div>
 
-      {/* molten progress seam — a weld travels it as you scroll, and each
-          project's node ignites as the weld reaches it */}
-      <div className="castings__seam" ref={seamRef} aria-hidden="true">
-        <div className="seam__fill" />
-        {PROJECTS.map((_, i) => (
-          <span
-            key={i}
-            className="seam__node"
-            style={{ left: `${(i / (PROJECTS.length - 1)) * 100}%` }}
-          >
-            <i className="seam__cube" />
-          </span>
-        ))}
-        <div className="seam__weld" />
-      </div>
+      <CastingsLiquid progressRef={progressRef} count={PROJECTS.length} />
     </section>
   )
 }
