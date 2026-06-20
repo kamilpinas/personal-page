@@ -63,11 +63,19 @@ export default function App() {
     }
   }, [loading])
 
-  // hold the scroll while the metal ignites
+  // hold the scroll while the metal ignites, then re-correct once loading
+  // ends — fonts/images can shift layout while it runs, and main.tsx's
+  // own scroll-lock handles the top-of-page guarantee during that window.
+  // Refreshing here recalculates every ScrollTrigger's start/end against
+  // final layout, keeping trigger state in sync with the corrected position.
   useEffect(() => {
     const lock = loading ? "hidden" : ""
     document.documentElement.style.overflow = lock
     document.body.style.overflow = lock
+    if (!loading) {
+      window.scrollTo(0, 0)
+      ScrollTrigger.refresh()
+    }
     return () => {
       document.documentElement.style.overflow = ""
       document.body.style.overflow = ""
