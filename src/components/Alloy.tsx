@@ -113,6 +113,18 @@ export function Alloy({ params }: Props) {
           )
         })
       })
+
+      gsap.fromTo(
+        ".alloy__more",
+        { opacity: 0, y: 14 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power2.out",
+          scrollTrigger: { trigger: ".alloy__more", start: "top 88%" },
+        },
+      )
     }, root)
 
     return () => ctx.revert()
@@ -120,22 +132,23 @@ export function Alloy({ params }: Props) {
 
   return (
     <section ref={rootRef} className="alloy" aria-label="Skills">
-      <div className="alloy__head">
-        <h2>
-          <span className="line-mask">
-            <span className="line-inner">What I'M</span>
-          </span>
-          <span className="line-mask">
-            <span className="line-inner chrome-text">MADE OF</span>
-          </span>
-        </h2>
-      </div>
+      <div className="alloy__header">
+        <div className="alloy__head">
+          <h2>
+            <span className="line-mask">
+              <span className="line-inner">What I'M</span>
+            </span>
+            <span className="line-mask">
+              <span className="line-inner chrome-text">MADE OF</span>
+            </span>
+          </h2>
+        </div>
 
-      {/* the molten ingot the skills are drawn from (WebGL renders on it) */}
-      <div className="alloy__ingot" ref={ingotRef} aria-hidden="true">
-        <AlloyLiquid params={params} />
+        {/* the molten ingot the skills are drawn from (WebGL renders on it) */}
+        <div className="alloy__ingot" ref={ingotRef} aria-hidden="true">
+          <AlloyLiquid params={params} />
+        </div>
       </div>
-
       <div className="alloy__grid">
         {GROUPS.map((g) => (
           <div className="alloy-col" key={g.label}>
@@ -153,6 +166,10 @@ export function Alloy({ params }: Props) {
           </div>
         ))}
       </div>
+
+      <p className="alloy__more">
+        ...and a few more tools picked up along the way
+      </p>
     </section>
   )
 }

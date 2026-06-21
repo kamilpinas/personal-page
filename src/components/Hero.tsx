@@ -198,13 +198,6 @@ export function Hero({ ignited, params }: Props) {
 
   return (
     <section ref={rootRef} className="hero" aria-label="Intro">
-      <a
-        className="hero__contact intro-hide"
-        href="mailto:kamilpinas@gmail.com"
-      >
-        kamilpinas@gmail.com
-      </a>
-
       <div className="hero__inner">
         <h1 className="hero__name">
           <span className="line pour chrome-text sheen-host" data-text="Kamil">
@@ -214,13 +207,18 @@ export function Hero({ ignited, params }: Props) {
             Pinas
           </span>
         </h1>
-        <p className="hero__role intro-hide">
-          <span className="rule" />
-          <span>
-            Frontend Software Engineer —{" "}
-            <span className="accent">React · TypeScript</span>
-          </span>
-        </p>
+        <div>
+          <p className="hero__role intro-hide">
+            <span className="rule" />
+            <span>
+              Frontend Software Engineer —{" "}
+              <span className="accent">React · TypeScript</span>
+            </span>
+          </p>
+          <p className="hero__availability intro-hide">
+            Available for B2B · 2-week notice · Open to remote
+          </p>
+        </div>
       </div>
 
       <div className="hero__cue intro-hide" aria-hidden="true">

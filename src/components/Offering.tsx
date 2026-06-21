@@ -4,11 +4,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { REDUCED_MOTION } from "../motion"
 import type { SphereParams } from "../webgl/LiquidSphere"
 import OfferingLiquid from "../webgl/sections/OfferingLiquid"
+import { IconGithub, IconLinkedin, IconWhatsapp } from "./icons"
 
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/kamilpinas" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/kamil-pinas" },
-  { label: "WhatsApp", href: "https://wa.me/48730697499" },
+  { label: "GitHub", href: "https://github.com/kamilpinas", Icon: IconGithub },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/kamil-pinas",
+    Icon: IconLinkedin,
+  },
+  { label: "WhatsApp", href: "https://wa.me/48730697499", Icon: IconWhatsapp },
 ]
 
 type Props = {
@@ -129,10 +134,21 @@ export function Offering({ params }: Props) {
             rel="noreferrer"
             className="stud"
           >
+            <s.Icon className="stud__icon" />
             {s.label}
           </a>
         ))}
       </div>
+
+      <button
+        type="button"
+        className="offer__top offer__reveal"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Back to top"
+      >
+        <span className="cue-rail" />
+        <span className="cue-label">Top</span>
+      </button>
     </section>
   )
 }

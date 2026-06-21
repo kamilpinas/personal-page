@@ -134,6 +134,14 @@
   position: absolute;
   left: 0;
 }
+.milestone--left .milestone__bullets li {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+.milestone--left .milestone__bullets li:before {
+  left: auto;
+  right: 0;
+}
 .milestone__links-group {
   display: flex;
   flex-direction: column;

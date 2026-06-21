@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Lenis from "lenis"
 import { Preloader } from "./components/Preloader"
 import { Hero } from "./components/Hero"
+import { TopBar } from "./components/TopBar"
 import { Maker } from "./components/Maker"
 import { Forge } from "./components/Forge"
 import { Alloy } from "./components/Alloy"
@@ -102,6 +103,7 @@ export default function App() {
       )}
 
       <Hero ignited={ignited} params={sphere} />
+      <TopBar ignited={ignited} />
       <Maker />
       <Forge params={sphere} />
       <Alloy params={sphere} />

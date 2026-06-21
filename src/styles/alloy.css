@@ -3,9 +3,15 @@
   z-index: 2;
   padding: 18vh clamp(1.5rem, 5vw, 6rem) 16vh;
 }
+
+.alloy__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6vh;
+}
 .alloy__head {
   text-align: center;
-  margin-bottom: 6vh;
+  margin: 6vh 0;
 }
 .alloy__head h2 {
   font-weight: 600;
@@ -18,9 +24,7 @@
 .alloy__ingot {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  height: clamp(5rem, 10vh, 10rem);
-  margin: 0 auto clamp(5rem, 10vh, 9rem);
+  max-width: 400px;
 }
 .alloy-liquid {
   position: absolute;
@@ -98,6 +102,15 @@
     #cdd4de
   );
   box-shadow: 0 0 10px #d6dde859;
+}
+
+.alloy__more {
+  text-align: center;
+  margin: clamp(3.5rem, 7vh, 5.5rem) auto 0;
+  font-family: var(--font-mono);
+  font-size: clamp(0.78rem, 0.95vw, 0.88rem);
+  letter-spacing: 0.04em;
+  color: var(--dim-2);
 }
 
 @media (max-width: 860px) {

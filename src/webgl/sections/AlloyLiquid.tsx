@@ -17,48 +17,63 @@ import type { SphereParams } from "../LiquidSphere"
 // its on-screen position tracks layout exactly. Reacts to the cursor
 // with a localised mercury-like bulge — the metal swells where the
 // pointer hovers and a softer "lean" follows the cursor's direction.
-
 const FRAG = /* glsl */ `${FRAG_PRELUDE}
 ${FRAG_CURSOR_UNIFORMS}
 uniform float uPool;
 ${NOISE_FNS}
 ${SDF_FNS}
 
+// ─── Molecule graph ───────────────────────────────────────────────────────────
+// Hard-coded H2O-like cluster; scale/positions tweak easily.
+
+float sdAtom(vec3 p, vec3 centre, float r) {
+  return length(p - centre) - r;
+}
+
+float sdBond(vec3 p, vec3 a, vec3 b, float r) {
+  return sdCapsule(p, a, b, r);
+}
+
 float map(vec3 p) {
   if (uPool < 0.001) return 1e3;
 
+  float t = uTime * 0.3;
+
+  // Gently tumble the molecule
+  float ay = t * 0.7, az = t * 0.4;
+  mat2  Ry = mat2(cos(ay), -sin(ay), sin(ay), cos(ay));
+  mat2  Rz = mat2(cos(az), -sin(az), sin(az), cos(az));
+  vec3  q  = p;
+  q.xz = Ry * q.xz;
+  q.xy = Rz * q.xy;
+
+  float scale = uPool * 1.3;
+
+  // Atom positions (model space)
+  vec3 O  = vec3( 0.00,  0.00,  0.00) * scale;
+  vec3 H1 = vec3( 0.70,  0.5,  0.00) * scale;
+  vec3 H2 = vec3(-0.70,  0.5,  0.00) * scale;
+  vec3 C  = vec3( 0.00, -0.7,  0.00) * scale; // carbon neighbour
+
+  float atomR = 0.28 * scale;
+  float bondR = 0.05 * scale;
+
+  float d = sdAtom(q, O,  atomR * 1.2);          // oxygen (bigger)
+  d = smin(d, sdAtom(q, H1, atomR * 0.75), 0.12); // hydrogen
+  d = smin(d, sdAtom(q, H2, atomR * 0.75), 0.12);
+  d = smin(d, sdAtom(q, C,  atomR * 0.85 ), 0.12); // carbon
+  d = smin(d, sdBond(q, O, H1, bondR), 0.08);
+  d = smin(d, sdBond(q, O, H2, bondR), 0.08);
+  d = smin(d, sdBond(q, O, C,  bondR), 0.08);
+
+  // Cursor bulge
+  float bulge = smoothstep(1.1, 0.0, length(q.xy - uMouse * 0.5));
+  d -= bulge * 0.15 * uMouseAmp * uPool;
+
+  // Liquid surface noise
   float flow = uTime * 0.5;
-  float aspect = uRes.x / min(uRes.x, uRes.y);
-  float halfW = aspect - 0.05;
+  d -= (fbm(q * 3.0 + vec3(-flow, 0.0, 4.0)) - 0.5) * 0.04 * uPool;
 
-  // slow mercurial roll
-  float ripple = 0.035 * sin(p.x * 2.0 + flow * 1.1)
-               + 0.02  * sin(p.x * 5.5 - flow * 2.1);
-
-  vec3 a = vec3(-halfW, ripple, 0.0);
-  vec3 b = vec3( halfW, ripple, 0.0);
-
-  // base radius
-  float r = 1.1 * uPool;
-  r = min(r, 1.35 * uPool);
-  // surface noise
-  r += 0.08 * fbm(vec3(p.x * 1.3 - flow * 1.4, 0.0, 5.0)) * uPool;
-
-  // cursor interaction: a strong local bulge under the pointer
-  float mx = uMouse.x * aspect;
-  float my = uMouse.y;
-  float distToMouse = length(p.xy - vec2(mx, my * 0.3));
-  float bulge = smoothstep(4.0, 0.0, distToMouse);
-  r += bulge * 0.3 * uMouseAmp * uPool;
-
-  // softer lean toward the cursor across the whole ingot
-  vec3 mdir = normalize(vec3(uMouse * 1.2, 0.8));
-  float facing = pow(max(dot(normalize(p + vec3(0, 0.6, 0)), mdir), 0.0), 4.0);
-  r += facing * 0.12 * uMouseAmp * uPool;
-
-  float d = sdCapsule(p, a, b, r);
-  // mercurial detail noise
-  d -= (fbm(p * 2.2 + vec3(-flow * 1.5, uTime * 0.2, 9.0)) - 0.5) * 0.08 * uPool;
   return d;
 }
 
@@ -67,7 +82,7 @@ ${ENV_FN}
 
 void main() {
   if (uPool < 0.001) discard;
-  ${raymarch(70)}
+  ${raymarch(80)}
   ${HALO_MISS}
   ${SHADE_HIT}
   outColor = vec4(col, edgeAlpha * silhouette);

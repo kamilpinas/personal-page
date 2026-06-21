@@ -39,14 +39,14 @@ float map(vec3 p) {
   float halfW = aspect * 1.619 - 0.5;
   float progress = clamp(uProgress, 0.0, 1.0);
 
-  float ripple = 0.025 * sin(p.x * 2.6 + flow * 1.4);
+  float ripple = 0.035 * sin(p.x * 2.6 + flow * 1.4);
   float fillX = mix(-halfW, halfW, progress);
 
   // the rail itself — fills left to right, with a glowing weld head
   // riding the leading edge of the fill
   vec3 ra = vec3(-halfW, ripple, 0.0);
   vec3 rb = vec3(fillX, ripple, 0.0);
-  float rr = 0.18 + 0.018 * fbm(vec3(p.x * 1.4 - flow * 1.3, 0.0, 2.0));
+  float rr = 0.12 + 0.018 * fbm(vec3(p.x * 1.4 - flow * 1.3, 0.0, 2.0));
   float d = sdCapsule(p, ra, rb, rr);
   d = smin(d, length(p - vec3(fillX, ripple, 0.0)) - 0.18, 0.07);
 
@@ -66,7 +66,7 @@ float map(vec3 p) {
     vec3 np = p - vec3(nx, ripple, 0.0);
 
     // vertical tick sizes
-    float halfHeight = 0.6 * grow;
+    float halfHeight = 0.5 * grow;
     float halfWidth  = 0.001;
 
     // box SDF for a thin vertical line
@@ -74,7 +74,7 @@ float map(vec3 p) {
     float tick = length(max(q, 0.0))
                + min(max(q.x, max(q.y, q.z)), 0.0);
 
-    d = smin(d, tick, 1.0);
+    d = smin(d, tick, 0.5);
 }
 
   return d;

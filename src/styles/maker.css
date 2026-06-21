@@ -174,18 +174,6 @@
     width: min(64vw, 16rem);
     margin: 0 0 2.6rem;
     padding: 9px;
-    border-radius: 12px;
-    background: linear-gradient(
-      165deg,
-      #f4f6f9,
-      #b7bec9 18%,
-      #6a717c 38%,
-      #2a2e35 52%,
-      #8d95a1,
-      #e9edf2 88%,
-      #545b66
-    );
-    box-shadow: 0 26px 60px #00000080;
   }
   .maker__portrait img {
     border-radius: 5px;
