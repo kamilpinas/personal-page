@@ -13,9 +13,28 @@ type Project = {
   poster: string
   tech: string[]
   link?: string
+  extensionLink?: string
 }
 
 const PROJECTS: Project[] = [
+  {
+    key: "senior-browse",
+    title: "SeniorBrowse",
+    tag: "Browser extension + website",
+    desc: "A Chrome extension that turns the browser into a calm, safe space for seniors — a simplified homepage with large shortcut tiles, one-tap text sizing, a helper panel on every page, and scam/phishing-site blocking. Caregivers get PIN-protected settings, ad removal, download limits and activity logs through a 5-minute setup wizard. I built both the extension and its marketing website.",
+    video: "/movies/senior-browse.mp4",
+    poster: "/images/senior-browse.png",
+    tech: [
+      "React",
+      "TypeScript",
+      "Manifest V3",
+      "Chrome Extension API",
+      "Cloudflare Workers",
+    ],
+    link: "https://senior-browse.kamilpinas.workers.dev/",
+    extensionLink:
+      "https://chromewebstore.google.com/detail/seniorbrowse/pkmalnikjbfdeomlekjfidpidmamefkn",
+  },
   {
     key: "mini-bouncer",
     title: "Mini Bouncer",
@@ -23,7 +42,14 @@ const PROJECTS: Project[] = [
     desc: "A high-performance landing page for a boutique event-rental business — smooth motion, mobile-first, conversion-optimized.",
     video: "/movies/mini-bouncer.mp4",
     poster: "/images/mini-bouncer.png",
-    tech: ["React", "TypeScript", "Vite", "Framer Motion", "EmailJS", "Cloudflare"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Framer Motion",
+      "EmailJS",
+      "Cloudflare",
+    ],
     link: "https://mini-bouncer.com",
   },
   {
@@ -33,8 +59,24 @@ const PROJECTS: Project[] = [
     desc: "A sleek, modern site for a flooring company — built to showcase products with strong visual appeal and a fast, mobile-first experience.",
     video: "/movies/dukeflooring.mp4",
     poster: "/images/duke.jpg",
-    tech: ["React", "TypeScript", "Vite", "Tailwind", "Framer Motion", "Swiper"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind",
+      "Framer Motion",
+      "Swiper",
+    ],
     link: "https://dukeflooring.com/",
+  },
+  {
+    key: "przysnilo",
+    title: "Przyśniło.się",
+    tag: "Full-stack dream journal",
+    desc: "A platform to record, share and explore dreams — JWT auth, voting, comments, Chart.js stats, image uploads and email notifications.",
+    video: "/movies/przysnilo.mp4",
+    poster: "/images/przysnilo.jpg",
+    tech: ["React", "TypeScript", "Node", "Express", "Prisma", "JWT"],
   },
   {
     key: "haruoto",
@@ -43,7 +85,15 @@ const PROJECTS: Project[] = [
     desc: "A vibrant site for a Japanese restaurant with an interactive menu and a seamless online reservation system.",
     video: "/movies/haruoto.mp4",
     poster: "/images/haruoto.jpg",
-    tech: ["React", "TypeScript", "Node", "Express", "Prisma", "Chart.js", "JWT"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Node",
+      "Express",
+      "Prisma",
+      "Chart.js",
+      "JWT",
+    ],
     link: "https://haruoto.pages.dev/",
   },
   {
@@ -55,15 +105,6 @@ const PROJECTS: Project[] = [
     poster: "/images/modular.jpg",
     tech: ["React", "TypeScript", "Vite", "Tailwind", "Framer Motion"],
     link: "https://modular-home.pages.dev/",
-  },
-  {
-    key: "przysnilo",
-    title: "Przyśniło.się",
-    tag: "Full-stack dream journal",
-    desc: "A platform to record, share and explore dreams — JWT auth, voting, comments, Chart.js stats, image uploads and email notifications.",
-    video: "/movies/przysnilo.mp4",
-    poster: "/images/przysnilo.jpg",
-    tech: ["React", "TypeScript", "Node", "Express", "Prisma", "JWT"],
   },
 ]
 
@@ -99,15 +140,18 @@ export function Castings({ params }: Props) {
           },
         )
       })
-      videos.forEach((v) => v && (v.play().catch(() => {})))
+      videos.forEach((v) => v && v.play().catch(() => {}))
       // in stacked layout each project sits at its own DOM Y
-      ;(window as unknown as { __gotoProject?: (key: string) => void }).__gotoProject = (key) => {
+      ;(
+        window as unknown as { __gotoProject?: (key: string) => void }
+      ).__gotoProject = (key) => {
         const idx = PROJECTS.findIndex((p) => p.key === key)
         if (idx < 0) return
         panels[idx]?.scrollIntoView({ behavior: "smooth", block: "start" })
       }
       return () => {
-        delete (window as unknown as { __gotoProject?: (key: string) => void }).__gotoProject
+        delete (window as unknown as { __gotoProject?: (key: string) => void })
+          .__gotoProject
       }
     }
 
@@ -132,14 +176,31 @@ export function Castings({ params }: Props) {
 
       // expose a scroller other sections can call to jump to a project.
       // pinned section: ScrollTrigger rewrites .offsetTop, so use its start/end
-      ;(window as unknown as { __gotoProject?: (key: string) => void }).__gotoProject = (key) => {
+      ;(
+        window as unknown as { __gotoProject?: (key: string) => void }
+      ).__gotoProject = (key) => {
         const idx = PROJECTS.findIndex((p) => p.key === key)
         if (idx < 0 || !pinST) return
-        const targetY = pinST.start + (idx / (PROJECTS.length - 1)) * (pinST.end - pinST.start)
-        const lenis = (window as unknown as { __lenis?: { scrollTo: (y: number, o?: { duration?: number; immediate?: boolean }) => void } }).__lenis
+        const targetY =
+          pinST.start +
+          (idx / (PROJECTS.length - 1)) * (pinST.end - pinST.start)
+        const lenis = (
+          window as unknown as {
+            __lenis?: {
+              scrollTo: (
+                y: number,
+                o?: { duration?: number; immediate?: boolean },
+              ) => void
+            }
+          }
+        ).__lenis
         // prefer Lenis so smooth scroll integrates with ScrollTrigger; native fallback otherwise
         if (lenis?.scrollTo) {
-          try { lenis.scrollTo(targetY, { duration: 1.4 }) } catch { window.scrollTo({ top: targetY, behavior: "smooth" }) }
+          try {
+            lenis.scrollTo(targetY, { duration: 1.4 })
+          } catch {
+            window.scrollTo({ top: targetY, behavior: "smooth" })
+          }
         } else {
           window.scrollTo({ top: targetY, behavior: "smooth" })
         }
@@ -172,7 +233,8 @@ export function Castings({ params }: Props) {
     }, root)
 
     return () => {
-      delete (window as unknown as { __gotoProject?: (key: string) => void }).__gotoProject
+      delete (window as unknown as { __gotoProject?: (key: string) => void })
+        .__gotoProject
       ctx.revert()
     }
   }, [params])
@@ -208,7 +270,8 @@ export function Castings({ params }: Props) {
 
             <div className="casting__info">
               <span className="casting__index">
-                {String(i + 1).padStart(2, "0")} / {String(PROJECTS.length).padStart(2, "0")}
+                {String(i + 1).padStart(2, "0")} /{" "}
+                {String(PROJECTS.length).padStart(2, "0")}
               </span>
               <span className="casting__tag">{p.tag}</span>
               <h3 className="casting__title">{p.title}</h3>
@@ -220,16 +283,29 @@ export function Castings({ params }: Props) {
                   </span>
                 ))}
               </div>
-              {p.link && (
-                <a
-                  className="casting__link"
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Visit live <span aria-hidden="true">↗</span>
-                </a>
-              )}
+              <div className="casting__links">
+                {p.link && (
+                  <a
+                    className="casting__link"
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {p.extensionLink ? "Visit website" : "Visit live"}{" "}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                {p.extensionLink && (
+                  <a
+                    className="casting__link"
+                    href={p.extensionLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Chrome extension <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}

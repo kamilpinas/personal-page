@@ -67,6 +67,17 @@ const MILESTONES: Milestone[] = [
       "Built complete products from concept to deployment, shipping real-world applications that users actually interact with.",
     links: [
       {
+        label: "SeniorBrowse",
+        tag: "Extension + website",
+        projectKey: "senior-browse",
+        bullets: [
+          "Chrome extension (Manifest V3) that makes browsing calm and safe for seniors",
+          "Simplified homepage, one-tap text sizing, helper panel and scam-site blocking",
+          "PIN-protected caregiver controls, ad removal and activity logs",
+          "Designed and built the marketing website on Cloudflare Workers"
+        ]
+      },
+      {
         label: "Duke Flooring",
         tag: "Website",
         projectKey: "duke-flooring",
