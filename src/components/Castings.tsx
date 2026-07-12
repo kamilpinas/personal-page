@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
       "Chrome Extension API",
       "Cloudflare Workers",
     ],
-    link: "https://senior-browse.kamilpinas.workers.dev/",
+    link: "https://seniorbrowse.pages.dev/",
     extensionLink:
       "https://chromewebstore.google.com/detail/seniorbrowse/pkmalnikjbfdeomlekjfidpidmamefkn",
   },
