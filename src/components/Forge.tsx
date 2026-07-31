@@ -11,7 +11,12 @@ type Milestone = {
   role: string
   blurb?: string
   bullets?: string[]
-  links?: { label: string; tag: string; projectKey: string; bullets?: string[] }[]
+  links?: {
+    label: string
+    tag: string
+    projectKey: string
+    bullets?: string[]
+  }[]
 }
 
 const MILESTONES: Milestone[] = [
@@ -47,7 +52,7 @@ const MILESTONES: Milestone[] = [
     ],
   },
   {
-    date: "Nov 2024 — Present",
+    date: "Nov 2024 — July 2026",
     title: "Zebra · Aurora Focus",
     role: "Frontend / UI Engineer",
     blurb:
@@ -57,6 +62,19 @@ const MILESTONES: Milestone[] = [
       "Integrated live OCR streams and managed hardware integration via Electron IPC",
       "Optimized real-time operations to handle thousands of concurrent camera updates",
       "Refactored legacy code and resolved 200+ SonarCube security issues",
+    ],
+  },
+  {
+    date: "2026 — Present",
+    title: "Antonovka Software",
+    role: "Frontend Developer",
+    blurb:
+      "Building high-performance iGaming websites — real-time, animation-heavy interfaces that stay fast under constant live data. Working across the stack from Next.js frontends to containerized deployments.",
+    bullets: [
+      "Built real-time iGaming UIs in Next.js and TypeScript with WebSocket-driven live data",
+      "Crafted animated, interactive experiences with Framer Motion, p5 and Tailwind CSS",
+      "Managed shared state with Zustand/Redux across complex, data-dense screens",
+      "Shipped through Dockerized builds deployed on Kubernetes",
     ],
   },
   {
@@ -74,8 +92,8 @@ const MILESTONES: Milestone[] = [
           "Chrome extension (Manifest V3) that makes browsing calm and safe for seniors",
           "Simplified homepage, one-tap text sizing, helper panel and scam-site blocking",
           "PIN-protected caregiver controls, ad removal and activity logs",
-          "Designed and built the marketing website on Cloudflare Workers"
-        ]
+          "Designed and built the marketing website on Cloudflare Workers",
+        ],
       },
       {
         label: "Duke Flooring",
@@ -84,8 +102,8 @@ const MILESTONES: Milestone[] = [
         bullets: [
           "Multi-page site with blog for SEO and content marketing",
           "EmailJS integration for automated lead management",
-          "Mobile-responsive, search-engine optimized design"
-        ]
+          "Mobile-responsive, search-engine optimized design",
+        ],
       },
       {
         label: "Mini Bouncer",
@@ -93,8 +111,8 @@ const MILESTONES: Milestone[] = [
         projectKey: "mini-bouncer",
         bullets: [
           "Dynamic reservation system with automated email offer delivery",
-          "Conversion-focused landing page with modern design and mobile UX"
-        ]
+          "Conversion-focused landing page with modern design and mobile UX",
+        ],
       },
     ],
   },
@@ -242,79 +260,79 @@ export function Forge({ params }: Props) {
         {MILESTONES.map((m, i) => {
           const yearMatch = m.date.match(/\b(19|20)\d{2}\b/)
           return (
-          <li
-            key={m.title}
-            className={`milestone ${i % 2 === 0 ? "milestone--left" : "milestone--right"}`}
-          >
-            <span
-              className="milestone__anchor"
-              ref={(el) => {
-                if (el) anchorRefs.current[i] = el
-              }}
-            />
-            <div className="milestone__card">
-              <span className="milestone__index">
-                {String(i + 1).padStart(2, "0")} /{" "}
-                {String(MILESTONES.length).padStart(2, "0")}
-              </span>
-              <time
-                className="milestone__date"
-                dateTime={yearMatch ? yearMatch[0] : undefined}
-              >
-                {m.date}
-              </time>
-              <h3 className="milestone__title">{m.title}</h3>
-              <p className="milestone__role">{m.role}</p>
-              {m.blurb && <p className="milestone__blurb">{m.blurb}</p>}
-              {m.bullets && (
-                <ul className="milestone__bullets">
-                  {m.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
-              {m.links && (
-                <div className="milestone__links-group">
-                  {m.links.map((l) => (
-                    <div key={l.projectKey} className="milestone__link-item">
-                      <button
-                        type="button"
-                        className="milestone__link"
-                        onClick={() => {
-                          const goto = (
-                            window as unknown as {
-                              __gotoProject?: (key: string) => void
-                            }
-                          ).__gotoProject
-                          if (goto) goto(l.projectKey)
-                          else
-                            document
-                              .querySelector(".castings")
-                              ?.scrollIntoView({ behavior: "smooth" })
-                        }}
-                      >
-                        <span>{l.label}</span>
-                        <i>— {l.tag}</i>
-                        <span
-                          aria-hidden="true"
-                          className="milestone__link-arrow"
+            <li
+              key={m.title}
+              className={`milestone ${i % 2 === 0 ? "milestone--left" : "milestone--right"}`}
+            >
+              <span
+                className="milestone__anchor"
+                ref={(el) => {
+                  if (el) anchorRefs.current[i] = el
+                }}
+              />
+              <div className="milestone__card">
+                <span className="milestone__index">
+                  {String(i + 1).padStart(2, "0")} /{" "}
+                  {String(MILESTONES.length).padStart(2, "0")}
+                </span>
+                <time
+                  className="milestone__date"
+                  dateTime={yearMatch ? yearMatch[0] : undefined}
+                >
+                  {m.date}
+                </time>
+                <h3 className="milestone__title">{m.title}</h3>
+                <p className="milestone__role">{m.role}</p>
+                {m.blurb && <p className="milestone__blurb">{m.blurb}</p>}
+                {m.bullets && (
+                  <ul className="milestone__bullets">
+                    {m.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                )}
+                {m.links && (
+                  <div className="milestone__links-group">
+                    {m.links.map((l) => (
+                      <div key={l.projectKey} className="milestone__link-item">
+                        <button
+                          type="button"
+                          className="milestone__link"
+                          onClick={() => {
+                            const goto = (
+                              window as unknown as {
+                                __gotoProject?: (key: string) => void
+                              }
+                            ).__gotoProject
+                            if (goto) goto(l.projectKey)
+                            else
+                              document
+                                .querySelector(".castings")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                          }}
                         >
-                          ↗
-                        </span>
-                      </button>
-                      {l.bullets && (
-                        <ul className="milestone__link-bullets">
-                          {l.bullets.map((bullet) => (
-                            <li key={bullet}>{bullet}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </li>
+                          <span>{l.label}</span>
+                          <i>— {l.tag}</i>
+                          <span
+                            aria-hidden="true"
+                            className="milestone__link-arrow"
+                          >
+                            ↗
+                          </span>
+                        </button>
+                        {l.bullets && (
+                          <ul className="milestone__link-bullets">
+                            {l.bullets.map((bullet) => (
+                              <li key={bullet}>{bullet}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </li>
           )
         })}
       </ol>
